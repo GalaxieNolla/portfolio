@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { ArrowRight, BookOpen, Code2, Camera } from 'lucide-react'
+import { ArrowRight, BookOpen, ShieldCheck, Presentation } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -8,33 +8,33 @@ export const Route = createFileRoute('/')({
 const sections = [
   {
     icon: BookOpen,
-    label: 'For Recruiters & Academics',
+    label: 'For Researchers & Analysts',
     title: 'Research',
     description:
-      'Published work in machine learning, NLP, and AI fairness — including papers at NeurIPS, ICLR, and CVPR.',
+      'Exploring the intersection of AI ethics, security policy, and geopolitics at the Berkeley Risk and Security Lab.',
     to: '/research',
     color: 'from-indigo-600 to-indigo-800',
-    badge: 'Academia & Industry',
+    badge: 'Security & Policy',
   },
   {
-    icon: Code2,
-    label: 'For Engineering Teams',
+    icon: ShieldCheck,
+    label: 'For Technical Teams',
     title: 'Projects',
     description:
-      'Open-source tools, full-stack applications, and systems-level software spanning Go, TypeScript, and Python.',
+      'Data science tools and software solutions built with Python, Java, and SQL, focusing on technical rigor and scalability.',
     to: '/projects',
     color: 'from-slate-700 to-slate-900',
-    badge: 'Software Engineering',
+    badge: 'Data Science',
   },
   {
-    icon: Camera,
-    label: 'For Photographers & Clients',
-    title: 'Modelling',
+    icon: Presentation,
+    label: 'For Students & Educators',
+    title: 'Teaching',
     description:
-      'A curated portfolio of editorial, commercial, and artistic modelling work. Available for bookings worldwide.',
-    to: '/modelling',
-    color: 'from-rose-800 to-pink-900',
-    badge: 'Creative & Editorial',
+      'Instructional materials and ethical frameworks developed as a UGSI for Data C104: Human Contexts and Ethics of Data.',
+    to: '/teaching',
+    color: 'from-amber-700 to-orange-900',
+    badge: 'Instruction',
   },
 ]
 
@@ -46,14 +46,14 @@ function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-900/50 via-slate-900 to-slate-900" />
         <div className="relative max-w-6xl mx-auto px-4 py-28 md:py-40">
           <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-4">
-            Researcher · Developer · Model
+            Researcher · Data Scientist · Educator
           </p>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Alex Rivera
+            Alexia Gallon
           </h1>
           <p className="text-slate-300 text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
-            I work at the intersection of machine learning research, software engineering, and
-            creative performance. Welcome to my portfolio — explore whichever world brings you here.
+            I study how algorithmic systems intersect with global security and social equity. 
+            Currently a Data Science & Political Science student at UC Berkeley.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -75,18 +75,18 @@ function Home() {
       {/* Audience guide */}
       <section className="bg-amber-50 border-y border-amber-100 py-5 px-4">
         <p className="text-center text-sm text-amber-800 font-medium">
-          Not sure where to go?&nbsp;
-          <Link to="/research" className="underline hover:text-amber-900">Research &amp; Projects</Link>
-          {' '}are for recruiters &amp; hiring teams —{' '}
-          <Link to="/modelling" className="underline hover:text-amber-900">Modelling</Link>
-          {' '}is for photographers &amp; creative clients.
+          Interested in my work at the lab?&nbsp;
+          <Link to="/research" className="underline hover:text-amber-900">Research</Link>
+          {' '}is for policy and security teams —{' '}
+          <Link to="/teaching" className="underline hover:text-amber-900">Teaching</Link>
+          {' '}covers my work with Data C104 at Berkeley.
         </p>
       </section>
 
       {/* Three main sections */}
       <section className="max-w-6xl mx-auto px-4 py-20">
-        <h2 className="text-3xl font-bold text-slate-900 mb-2 text-center">Explore My Work</h2>
-        <p className="text-slate-500 text-center mb-12">Three distinct disciplines, one portfolio.</p>
+        <h2 className="text-3xl font-bold text-slate-900 mb-2 text-center">Portfolio & Work</h2>
+        <p className="text-slate-500 text-center mb-12">Bridging technical data science with human-centered policy.</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {sections.map((s) => {
             const Icon = s.icon
@@ -119,10 +119,10 @@ function Home() {
       <section className="bg-slate-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { num: '3', label: 'Publications' },
-            { num: '4+', label: 'Open Source Projects' },
-            { num: '5+', label: 'Years Coding' },
-            { num: '50+', label: 'Shoots Completed' },
+            { num: '2026', label: 'Expected Graduation' },
+            { num: '2', label: 'Lab Projects' },
+            { num: '100+', label: 'Students Mentored' },
+            { num: '3.9+', label: 'Academic Focus' },
           ].map((stat) => (
             <div key={stat.label}>
               <p className="text-4xl font-bold text-amber-400 mb-1">{stat.num}</p>
