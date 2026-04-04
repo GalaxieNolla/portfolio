@@ -131,9 +131,9 @@ function Contact() {
                 className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-colors text-sm bg-white"
               >
                 <option value="">Select a topic…</option>
-                <option value="research">Research / Academic</option>
-                <option value="engineering">Engineering / Recruiting</option>
-                <option value="modelling">Modelling / Photography Booking</option>
+                <option value="research">Research</option>
+                <option value="engineering">Recruiting</option>
+                <option value="modelling">Creative Booking</option>
                 <option value="other">Other</option>
               </select>
             </div>
