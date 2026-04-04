@@ -1,81 +1,48 @@
-
 export default [
   {
-    "title": "A Comparative Survey of Deep Learning Architectures for Sequence Modeling",
-    "description": "An in-depth survey examining transformer variants, recurrent networks, and state space models across long-range dependency benchmarks, with ablation studies on computational efficiency.",
-    "date": "2024-09-10",
-    "venue": "NeurIPS 2024",
+    "title": "Racism Repeats Itself: AI Racial Bias in Predictive Policing Algorithms",
+    "description": "An investigation into how artificial intelligence predictive policing algorithms (PPAs) target historically marginalized communities, with a specific case study on PredPol's racial bias in Los Angeles.",
+    "date": "2023-11-01",
+    "venue": "Bay Honors Research Symposium",
     "tags": [
-      "Deep Learning",
-      "Transformers",
-      "Sequence Modeling",
-      "Machine Learning"
+      "AI Ethics",
+      "Predictive Policing",
+      "Algorithmic Bias",
+      "Criminal Justice"
     ],
     "authors": [
-      "Your Name",
-      "Jane Smith",
-      "Prof. Robert Chen"
+      "Alexia Gallon"
     ],
-    "arxiv": "https://arxiv.org",
-    "content": "## Overview\n\nThis paper presents a systematic evaluation of modern deep learning architectures applied to sequence modeling tasks. We benchmark transformer variants (BERT, GPT, LLaMA), structured state space models (S4, Mamba), and hybrid approaches across six long-range dependency datasets.\n\n## Key Contributions\n\n- Introduced a unified benchmarking framework for fair cross-architecture comparison\n- Demonstrated that state space models achieve 2.3× speedup over transformers on sequences >4096 tokens with comparable accuracy\n- Proposed a novel attention approximation that reduces quadratic complexity to near-linear scaling\n\n## Results\n\nOur experiments across 6 datasets and 4 model families show that no single architecture dominates all regimes, underscoring the importance of task-specific model selection.",
+    "content": "## Research Focus\n\nThis study investigates the tendency of AI predictive policing algorithms (PPAs) to reinforce historical biases. By analyzing the PredPol system's application in Los Angeles, I quantified how feedback loops in data collection lead to the disproportionate targeting of marginalized neighborhoods.\n\n## Key Findings\n\n- Identified a direct correlation between historical arrest data and the reinforcement of predictive 'hotspots' in specific zip codes.\n- Demonstrated how algorithmic 'neutrality' masks systemic biases in data entry and law enforcement reporting.\n- Proposed policy frameworks for more transparent algorithmic accountability in public safety tools.",
     "_meta": {
-      "filePath": "deep-learning-survey.md",
-      "fileName": "deep-learning-survey.md",
+      "filePath": "ai-racial-bias.md",
+      "fileName": "ai-racial-bias.md",
       "directory": ".",
       "extension": "md",
-      "path": "deep-learning-survey"
+      "path": "ai-racial-bias"
     }
   },
   {
-    "title": "Mitigating Algorithmic Bias in Clinical Decision Support Systems",
-    "description": "We study demographic disparities in ML-based clinical predictions and propose a post-processing fairness intervention that reduces performance gaps across patient subgroups without sacrificing overall accuracy.",
-    "date": "2024-04-22",
-    "venue": "ICLR 2024",
+    "title": "Foreign Worker Dilemma: A Comparative Analysis of Japan and the UK’s Labor Force",
+    "description": "A critical evaluation of federal policies, recruitment strategies, and welfare protections designed to attract and retain foreign workers in two distinct geopolitical contexts.",
+    "date": "2024-11-01",
+    "venue": "Bay Honors Research Symposium",
     "tags": [
-      "AI Fairness",
-      "Healthcare AI",
-      "Bias Mitigation",
-      "Ethics"
+      "Public Policy",
+      "Geopolitics",
+      "Labor Migration",
+      "Comparative Politics"
     ],
     "authors": [
-      "Your Name",
-      "Dr. Amara Osei"
+      "Alexia Gallon"
     ],
-    "pdf": "https://example.com",
-    "content": "## Motivation\n\nClinical decision support systems trained on historically biased datasets perpetuate disparities in patient outcomes. This work quantifies those disparities and introduces a fairness-aware calibration method applicable post-deployment.\n\n## Methodology\n\nWe collected de-identified records from three hospital systems and trained readmission-risk models using gradient boosting and neural networks. Fairness metrics (equalized odds, demographic parity) were measured across age, gender, and insurance status groups.\n\n## Findings\n\nOur calibration intervention reduced the maximum cross-group AUC gap from 11.4% to 3.1% while maintaining overall system AUC within 0.8% of the unconstrained baseline.",
+    "content": "## Overview\n\nThis research project compares the federal strategies of Japan and the UK in addressing labor shortages through foreign worker recruitment. I analyzed how differing welfare protections and immigration policies affect a nation's ability to attract global talent.\n\n## Methodology\n\n- Conducted a comparative analysis of federal immigration statutes and social safety net accessibility for non-citizens.\n- Evaluated the impact of cultural integration versus temporary 'guest worker' models on long-term labor stability.\n\n## Impact\n\nPresented at the 2024 Bay Honors Research Symposium, this work highlights the growing tension between national security, economic necessity, and human rights in modern migration policy.",
     "_meta": {
-      "filePath": "fairness-ml.md",
-      "fileName": "fairness-ml.md",
+      "filePath": "foreign-worker-dilemma.md",
+      "fileName": "foreign-worker-dilemma.md",
       "directory": ".",
       "extension": "md",
-      "path": "fairness-ml"
-    }
-  },
-  {
-    "title": "Cross-Modal Representation Learning for Vision-Language Alignment",
-    "description": "A contrastive learning framework that aligns visual and textual embeddings in a shared latent space, enabling zero-shot image-text retrieval with state-of-the-art performance on COCO and Flickr30k.",
-    "date": "2023-11-05",
-    "venue": "CVPR 2023",
-    "tags": [
-      "Multimodal Learning",
-      "Computer Vision",
-      "NLP",
-      "Contrastive Learning"
-    ],
-    "authors": [
-      "Your Name",
-      "Liang Wei",
-      "Prof. Sara Montoya"
-    ],
-    "arxiv": "https://arxiv.org",
-    "pdf": "https://example.com",
-    "content": "## Abstract\n\nWe present CrossAlign, a scalable contrastive learning framework for vision-language alignment trained on 400M image-caption pairs. CrossAlign achieves 82.1% Recall@1 on COCO image-text retrieval (zero-shot), surpassing CLIP by 4.3 points with 40% fewer parameters.\n\n## Architecture\n\nCrossAlign employs a dual-encoder design with a novel cross-attention bridge module that facilitates bidirectional grounding without full cross-modal attention, keeping inference costs low.\n\n## Impact\n\nThe pretrained model has been adopted by two downstream applications in medical image captioning and e-commerce product search, with subsequent papers citing improvements in domain-specific retrieval tasks.",
-    "_meta": {
-      "filePath": "multimodal-learning.md",
-      "fileName": "multimodal-learning.md",
-      "directory": ".",
-      "extension": "md",
-      "path": "multimodal-learning"
+      "path": "foreign-worker-dilemma"
     }
   }
 ]
