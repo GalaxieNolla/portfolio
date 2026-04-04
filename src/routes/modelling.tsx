@@ -6,49 +6,27 @@ export const Route = createFileRoute('/modelling')({
 })
 
 // Gallery items with themed gradients – replace src with real photo paths
-const gallery = [
+const galleries = [
   {
-    id: 1,
-    category: 'Editorial',
-    title: 'Autumn Contrast',
-    gradient: 'from-rose-900 via-pink-800 to-orange-700',
-    span: 'md:col-span-2 md:row-span-2',
+    photographer: "Isaac Alvarez",
+    description: "Cinematic portraiture and high-end editorial photography.",
+    images: [
+      "/images/modelling/editorial.png",
+      "/images/modelling/hair%20outside.png",
+      "/images/modelling/side%20profile.png",
+      "/images/modelling/window.png",
+    ]
   },
   {
-    id: 2,
-    category: 'Commercial',
-    title: 'Studio White',
-    gradient: 'from-slate-700 via-slate-500 to-slate-400',
-    span: '',
-  },
-  {
-    id: 3,
-    category: 'Artistic',
-    title: 'Blue Hour',
-    gradient: 'from-blue-900 via-indigo-800 to-violet-700',
-    span: '',
-  },
-  {
-    id: 4,
-    category: 'Fashion',
-    title: 'Monochrome Noir',
-    gradient: 'from-zinc-900 via-zinc-700 to-zinc-500',
-    span: '',
-  },
-  {
-    id: 5,
-    category: 'Outdoor',
-    title: 'Golden Hour',
-    gradient: 'from-amber-600 via-orange-500 to-yellow-400',
-    span: '',
-  },
-  {
-    id: 6,
-    category: 'Editorial',
-    title: 'Winter Palette',
-    gradient: 'from-sky-800 via-teal-700 to-emerald-600',
-    span: 'md:col-span-2',
-  },
+    photographer: "Dino Corti",
+    description: "Dynamic studio work and artistic fashion captures.",
+    images: [
+      "/images/modelling/boom.png",
+      "/images/modelling/diamond.png",
+      "/images/modelling/ribbon.png",
+      "/images/modelling/wrap.png",
+    ]
+  }
 ]
 
 function GalleryCard({ item }: { item: (typeof gallery)[0] }) {
