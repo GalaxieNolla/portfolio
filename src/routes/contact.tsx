@@ -7,10 +7,10 @@ export const Route = createFileRoute('/contact')({
 })
 
 const reasons = [
-  { icon: BookOpen, label: 'Research collaboration or academic inquiry' },
-  { icon: Code2, label: 'Engineering role or consulting opportunity' },
-  { icon: Camera, label: 'Photography booking or creative project' },
-  { icon: Mail, label: 'General question or other' },
+  { icon: BookOpen, label: 'Research collaboration' },
+  { icon: Code2, label: 'Software Engineering, data analytics, or cyber role' },
+  { icon: Camera, label: 'Creative shoots' },
+  { icon: Mail, label: 'Any other questions!' },
 ]
 
 function Contact() {
