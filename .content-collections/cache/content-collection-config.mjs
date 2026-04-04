@@ -45,19 +45,6 @@ var education = defineCollection({
     content: z.string()
   })
 });
-var blog = defineCollection({
-  name: "blog",
-  directory: "content/blog",
-  include: "**/*.md",
-  schema: z.object({
-    title: z.string(),
-    date: z.string(),
-    summary: z.string(),
-    tags: z.array(z.string()),
-    author: z.string(),
-    content: z.string()
-  })
-});
 var projects = defineCollection({
   name: "projects",
   directory: "content/projects",
@@ -73,7 +60,7 @@ var projects = defineCollection({
   })
 });
 var content_collections_default = defineConfig({
-  collections: [research, jobs, education, blog, projects]
+  collections: [research, jobs, education, projects]
 });
 export {
   content_collections_default as default
