@@ -18,19 +18,31 @@ function Resume() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
       <div className="mb-12">
-        <p className="text-indigo-600 font-semibold text-sm uppercase tracking-widest mb-3">
-          Professional Background
-        </p>
+        <div className="flex items-center gap-6 mb-8">
+          {/* Your updated headshot */}
+          <img 
+            src="/headshot.png" 
+            alt="Alexia Gallon" 
+            className="h-24 w-24 rounded-2xl object-cover shadow-lg border border-slate-200" 
+          />
+          <div>
+            <p className="text-indigo-600 font-semibold text-sm uppercase tracking-widest mb-1">
+              Professional Background
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900">Resume</h1>
+          </div>
+        </div>
+
         <div className="flex items-start justify-between flex-wrap gap-4">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Resume</h1>
+            <h2 className="text-2xl font-semibold text-slate-800 mb-2">Alexia Gallon</h2>
             <p className="text-slate-600 text-lg max-w-2xl">
-              Work experience, education, and skills.
+              Researcher · Developer · Model
             </p>
           </div>
           <a
-            href="#"
-            className="inline-flex items-center gap-2 border border-slate-300 text-slate-700 font-semibold px-5 py-2.5 rounded-lg hover:border-slate-500 transition-colors text-sm"
+            href="/resume.pdf"
+            className="inline-flex items-center gap-2 bg-slate-900 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-slate-800 transition-colors text-sm"
           >
             <FileText size={14} /> Download PDF
           </a>
