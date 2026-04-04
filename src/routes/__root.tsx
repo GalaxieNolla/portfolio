@@ -9,7 +9,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'Alex Rivera — Researcher · Developer · Model' },
+      { title: 'Alexia Gallon — Researcher · Developer · Model' },
     ],
   }),
   shellComponent: RootDocument,
@@ -48,8 +48,11 @@ function Nav() {
   return (
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-700">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="text-white font-bold text-lg tracking-tight">
-          Alex Rivera
+        <Link to="/" className="flex items-center gap-3 text-white font-bold text-lg tracking-tight hover:opacity-90 transition-opacity">
+          {/* Your new Logo and Headshot */}
+          <img src="/logo.png" alt="Logo" className="h-8 w-8 object-contain" />
+          <img src="/headshot.png" alt="Alexia Gallon" className="h-8 w-8 rounded-full object-cover border border-slate-700" />
+          <span>Alexia Gallon</span>
         </Link>
 
         {/* Desktop nav */}
@@ -84,7 +87,7 @@ function Nav() {
 function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-400 text-sm text-center py-8 mt-16">
-      <p>© {new Date().getFullYear()} Alex Rivera · Researcher · Developer · Model</p>
+      <p>© {new Date().getFullYear()} Alexia Gallon · Researcher · Developer · Model</p>
     </footer>
   )
 }
