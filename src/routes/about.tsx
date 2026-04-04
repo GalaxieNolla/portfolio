@@ -8,31 +8,31 @@ export const Route = createFileRoute('/about')({
 })
 
 const skills = {
-  Research: ['Machine Learning', 'NLP', 'Computer Vision', 'AI Ethics', 'Statistics', 'PyTorch', 'HuggingFace'],
-  Engineering: ['TypeScript', 'Python', 'Go', 'React', 'Node.js', 'PostgreSQL', 'Docker', 'Redis'],
-  Tools: ['Git', 'Linux', 'LaTeX', 'Jupyter', 'Figma', 'AWS', 'Netlify'],
+  Technical: ['Python', 'Java', 'SQL', 'Linux', 'Git', 'LaTeX', 'PyTorch', 'Data Mining'],
+  Domain: ['AI Ethics', 'Cybersecurity', 'Political Science', 'Geopolitics', 'Public Policy'],
+  Professional: ['Research', 'Teaching (UGSI)', 'Communication', 'Technical Writing'],
 }
 
 const timeline = [
   {
-    year: '2022 – Present',
-    role: 'ML Research Scientist',
-    org: 'AI Research Lab, University',
-    desc: 'Leading projects on multimodal learning and AI fairness; first-author publications at top-tier venues.',
+    year: '2025 – Present',
+    role: 'Data C104 UGSI / Reader',
+    org: 'UC Berkeley CDSS',
+    desc: 'Leading discussion sections on algorithmic accountability and evaluating student research on AI ethics.',
     icon: GraduationCap,
   },
   {
-    year: '2020 – 2022',
-    role: 'Software Engineer',
-    org: 'TechCorp',
-    desc: 'Built distributed data pipelines and ML serving infrastructure handling millions of requests per day.',
-    icon: Briefcase,
+    year: '2025 – Present',
+    role: 'Research Apprentice',
+    org: 'Berkeley Risk and Security Lab',
+    desc: 'Analyzing China\'s 14th Five-Year Plans and tracking emerging tech priorities under Dr. Elaine Korzak.',
+    icon: Lightbulb,
   },
   {
-    year: '2016 – 2020',
-    role: 'BSc Computer Science',
-    org: 'University of Excellence',
-    desc: 'Graduated with First Class Honours. Thesis on adversarial robustness in neural networks.',
+    year: '2021 – Present',
+    role: 'BA Data Science & Political Science',
+    org: 'UC Berkeley',
+    desc: 'Focused on the intersection of national security, algorithmic bias, and human-computer interaction.',
     icon: GraduationCap,
   },
 ]
@@ -45,21 +45,22 @@ function About() {
         <div className="flex-1">
           <p className="text-indigo-600 font-semibold text-sm uppercase tracking-widest mb-3">About Me</p>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Researcher, engineer,<br />and creative.
+            Data scientist, researcher,<br />and policy analyst.
           </h1>
           <p className="text-slate-600 text-lg leading-relaxed mb-4">
-            I'm Alex Rivera — a machine learning researcher and software engineer with a passion for
-            building systems that are both technically rigorous and genuinely useful. My academic
-            work focuses on sequence modeling, multimodal AI, and algorithmic fairness.
+            I'm Alexia Gallon — a student at UC Berkeley exploring how data-driven systems 
+            intersect with global security and social equity. My work is rooted in the "Three Cs": 
+            Creativity, Curiosity, and Communication.
           </p>
           <p className="text-slate-600 leading-relaxed mb-4">
-            Outside the lab I write production software, contribute to open-source, and work as a
-            model — a creative outlet that keeps me curious about visual storytelling and
-            collaboration. I believe diverse experiences make for better researchers and better humans.
+            Through my research at the Berkeley Risk and Security Lab, I investigate how national 
+            security priorities shape emerging technology. I also serve as a UGSI for Data C104, 
+            helping peers navigate the complex ethical landscapes of modern data science.
           </p>
           <p className="text-slate-600 leading-relaxed mb-8">
-            I'm based in New York City and open to research collaborations, engineering roles,
-            and modelling bookings worldwide.
+            I am passionate about bridging the gap between technical rigor and human-centric policy, 
+            with a specific interest in mitigating bias in predictive algorithms and understanding 
+            international cyber strategy.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
@@ -79,12 +80,12 @@ function About() {
         <div className="md:w-72">
           <img
             src="/headshot-on-white.jpg"
-            alt="Alex Rivera"
+            alt="Alexia Gallon"
             className="w-full rounded-2xl object-cover shadow-lg"
           />
           <div className="mt-4 flex items-center gap-2 text-slate-500 text-sm">
             <MapPin size={14} />
-            <span>New York City, USA</span>
+            <span>Berkeley, CA</span>
           </div>
         </div>
       </div>
