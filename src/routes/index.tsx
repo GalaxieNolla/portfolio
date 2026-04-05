@@ -14,7 +14,7 @@ const sections = [
       'Exploring the intersection of emerging technology, governance, and international relations.',
     to: '/research',
     /* Updated: Indigo to Deep Purple */
-    color: 'from-indigo-600 via-blue-600 to-blue-500',
+    color: 'from-sky-400 to-blue-500',
     badge: 'Tech Governance',
   },
   {
