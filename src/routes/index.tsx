@@ -8,36 +8,36 @@ export const Route = createFileRoute('/')({
 const sections = [
   {
     icon: BookOpen,
-    label: 'For Researchers & Analysts',
+    label: 'For Researchers, Policy Analysts, and Academics',
     title: 'Research',
     description:
-      'Exploring the intersection of AI ethics, security policy, and geopolitics at the Berkeley Risk and Security Lab.',
+      'Exploring the intersection of emerging technology, governance, and international relations.',
     to: '/research',
     /* Updated: Indigo to Deep Purple */
-    color: 'from-purple-600 to-indigo-900',
-    badge: 'Security & Policy',
+    color: 'from-purple-500 to-blue-500',
+    badge: 'Tech Governance',
   },
   {
     icon: ShieldCheck,
     label: 'For Technical Teams',
     title: 'Projects',
     description:
-      'Data science tools and software solutions built with Python, Java, and SQL, focusing on technical rigor and scalability.',
+      'Technical systems and software solutions built with Python, Java, and SQL—ranging from data pipelines to cyber training.',
     to: '/projects',
-    /* Updated: Dark Gray to Deep Blue */
+    /* Color: Deep Blue */
     color: 'from-blue-700 to-slate-900',
-    badge: 'Data Science',
+    badge: 'Software & Systems',
   },
   {
-    icon: Presentation,
-    label: 'For Students & Educators',
-    title: 'Teaching',
+    icon: Camera,
+    label: 'For Photographers, Directors, and Agencies',
+    title: 'Creative Work',
     description:
-      'Instructional materials and ethical frameworks developed as a UGSI for Data C104: Human Contexts and Ethics of Data.',
-    to: '/teaching',
-    /* Updated: Amber/Orange to Electric Blue/Purple */
-    color: 'from-blue-600 to-purple-800',
-    badge: 'Instruction',
+      'Commercial, editorial, and artistic visual projects.',
+    to: '/modeling',
+    /* Color: Electric Blue/Purple */
+    color: 'from-indigo-500 via-purple-600 to-pink-500',
+    badge: 'Creative & Performance',
   },
 ]
 
