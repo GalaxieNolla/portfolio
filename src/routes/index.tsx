@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { ArrowRight, BookOpen, ShieldCheck, Presentation } from 'lucide-react'
+import { ArrowRight, BookOpen, Camera, ShieldCheck, Presentation } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
   component: Home,
