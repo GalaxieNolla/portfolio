@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Instagram, Mail, ArrowRight } from 'lucide-react'
 
-// CRITICAL: Ensure this string matches your filename exactly (modelling vs modeling)
 export const Route = createFileRoute('/modelling')({
   component: Modeling,
 })
@@ -48,7 +47,7 @@ function Modeling() {
 
         <div className="space-y-6 text-slate-300 text-lg leading-relaxed border-l border-white/5 pl-8">
           <p>
-            As an emerging actress with a foundation in stage theater and short film, I am expanding my creative reach into the editorial and fashion landscape. I view myself as a <span className="text-white font-medium">blank canvas</span>—an anchor that translates a team's collective vision into a tangible narrative through movement, presence, and expressive storytelling.
+            As an emerging actress with a foundation in stage theater and short film, I am expanding my creative reach into the <span className="text-white">commercial, editorial, and fashion landscape</span>. I view myself as a <span className="text-white font-medium">blank canvas</span>—an anchor that translates a vision into a visual narrative through movement, presence, and hues.
           </p>
           <p>
             I am currently focused on portfolio development through high-level collaboration. Whether the project is commercial, editorial, or experimental, I thrive in environments where photographers, stylists, and directors seek a dedicated professional to bring their concepts to life.
