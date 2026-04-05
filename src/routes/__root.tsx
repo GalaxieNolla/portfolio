@@ -56,18 +56,12 @@ function Nav() {
           className="flex items-center gap-3 text-white font-bold text-lg tracking-tight hover:opacity-80 transition-opacity group"
           onClick={() => setOpen(false)}
         >
-          <div className="relative flex items-center">
-            <img 
-              src="/logo.png" 
-              alt="Logo" 
-              className="h-8 w-8 object-contain transition-transform group-hover:scale-110" 
-            />
-            <img 
-              src="/headshot.png" 
-              alt="Alexia Gallon" 
-              className="h-6 w-6 rounded-full object-cover border border-slate-700 absolute -bottom-1 -right-1 bg-slate-900" 
-            />
-          </div>
+          {/* Logo Only Header */}
+          <img 
+            src="/logo.png" 
+            alt="Alexia Gallon Logo" 
+            className="h-8 w-8 object-contain transition-transform group-hover:scale-110" 
+          />
           <span className="hidden sm:inline-block ml-1">Alexia Gallon</span>
         </Link>
 
