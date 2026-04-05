@@ -6,7 +6,7 @@ export const Route = createFileRoute('/modelling')({
 })
 
 // Gallery items with themed gradients – replace src with real photo paths
-const galleries = [
+const gallery = [
   {
     photographer: "Isaac Alvarez",
     description: "Cinematic portraiture and high-end editorial photography.",
@@ -31,20 +31,22 @@ const galleries = [
 
 function GalleryCard({ item }: { item: (typeof gallery)[0] }) {
   return (
-    <div
-      className={`relative group rounded-xl overflow-hidden ${item.span} aspect-square md:aspect-auto md:min-h-52`}
-    >
-      {/* Gradient placeholder — replace with <img> when photos are available */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient}`} />
-
+    <div className="relative group rounded-xl overflow-hidden aspect-square md:aspect-auto md:min-h-52">
+      {/* Background Image (using the first image in the array) */}
+      <img 
+        src={item.images[0]} 
+        alt={item.description} 
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      
       {/* Overlay on hover */}
-      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-5">
-        <div className="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-          <span className="text-xs font-semibold uppercase tracking-widest text-white/70 mb-1 block">
-            {item.category}
-          </span>
-          <p className="text-white font-bold text-lg">{item.title}</p>
-        </div>
+      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+        <span className="text-xs text-amber-400 font-medium uppercase tracking-wider mb-1">
+          {item.photographer}
+        </span>
+        <p className="text-white text-sm leading-snug">
+          {item.description}
+        </p>
       </div>
     </div>
   )
