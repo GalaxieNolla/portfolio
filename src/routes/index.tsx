@@ -43,16 +43,16 @@ function Index() {
         </div>
       </div>
 
-      {/* Portfolio & Work Section */}
+      {/* Portfolio & Projects Section */}
       <div className="max-w-7xl mx-auto px-4 py-20 border-t border-white/5">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Portfolio & Work</h2>
-          <p className="text-slate-400 italic font-serif">Bridging technical data science with human-centered policy.</p>
+          <p className="text-slate-400 italic font-serif">Transforming theory into practice.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Research Card - Purple/Blue Gradient */}
-          <div className="rounded-[2.5rem] bg-gradient-to-br from-purple-600 to-blue-500 p-10 flex flex-col h-[400px] justify-between group hover:scale-[1.02] transition-transform shadow-xl">
+          <div className="rounded-[2.5rem] bg-gradient-to-br from-sky-600 to-blue-500 p-10 flex flex-col h-[400px] justify-between group hover:scale-[1.02] transition-transform shadow-xl">
             <div>
               <div className="bg-white/20 w-fit p-3 rounded-xl mb-6">
                 <Book className="text-white" size={28} />
@@ -77,7 +77,7 @@ function Index() {
               <p className="text-blue-400/60 text-xs font-bold uppercase tracking-widest mb-2">Software & Systems</p>
               <h3 className="text-3xl font-bold text-white mb-4">Projects</h3>
               <p className="text-slate-400 leading-relaxed">
-                Technical systems and software solutions built with Python, Java, and SQL—ranging from data pipelines to cyber training.
+                Technical systems and software solutions built with Python, Java, and SQL.
               </p>
             </div>
             <Link to="/projects" className="flex items-center gap-2 text-white font-bold group-hover:translate-x-2 transition-transform">
