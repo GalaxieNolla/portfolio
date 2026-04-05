@@ -1,135 +1,76 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { Badge } from '@/components/ui/badge'
-import { Separator } from '@/components/ui/separator'
-import { ArrowRight, Download, MapPin, GraduationCap, Lightbulb } from 'lucide-react'
+import { ArrowRight, Code2, ShieldCheck, Microscope } from 'lucide-react'
 
-export const Route = createFileRoute('/about')({
-  component: About,
+export const Route = createFileRoute('/')({
+  component: Index,
 })
 
-const skills = {
-  Technical: ['Python', 'Java', 'SQL', 'Linux', 'Git', 'LaTeX', 'PyTorch', 'Data Mining'],
-  Domain: ['AI Ethics', 'Cybersecurity', 'Political Science', 'Geopolitics', 'Public Policy'],
-  Professional: ['Research', 'Teaching (UGSI)', 'Communication', 'Technical Writing'],
-}
-
-const timeline = [
-  {
-    year: '2025 – Present',
-    role: 'Data C104 UGSI / Reader',
-    org: 'UC Berkeley CDSS',
-    desc: 'Leading discussion sections on algorithmic accountability and evaluating student research on AI ethics.',
-    icon: GraduationCap,
-  },
-  {
-    year: '2025 – Present',
-    role: 'Research Apprentice',
-    org: 'Berkeley Risk and Security Lab',
-    desc: "Analyzing China's 14th Five-Year Plans and tracking emerging tech priorities under Dr. Elaine Korzak.",
-    icon: Lightbulb,
-  },
-  {
-    year: '2021 – Present',
-    role: 'BA Data Science & Political Science',
-    org: 'UC Berkeley',
-    desc: 'Focused on the intersection of national security, algorithmic bias, and human-computer interaction.',
-    icon: GraduationCap,
-  },
-]
-
-function About() {
+function Index() {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-16">
-      {/* Hero */}
-      <div className="flex flex-col md:flex-row gap-12 items-start mb-16">
-        <div className="flex-1">
-          <p className="text-purple-400 font-semibold text-sm uppercase tracking-widest mb-3">About Me</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Data scientist, researcher,<br />and policy analyst.
-          </h1>
-          <p className="text-slate-300 text-lg leading-relaxed mb-6">
-            I am a Software Engineer and Researcher at the **Berkeley Risk and Security Lab**, where I investigate how national security priorities and emerging technologies collide.
+    <div className="max-w-7xl mx-auto px-4 pt-32 pb-20">
+      {/* Hero Section */}
+      <div className="max-w-3xl mb-24">
+        <p className="text-purple-400 font-semibold text-sm uppercase tracking-[0.3em] mb-6">
+          Software Engineer & Researcher
+        </p>
+        <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-[1.1]">
+          Building resilient systems at the <span className="text-slate-500">intersection of tech and policy.</span>
+        </h1>
+        
+        <div className="space-y-6 mb-10">
+          <p className="text-slate-300 text-xl leading-relaxed max-w-2xl">
+            I’m Alexia Gallon — a Software Engineer and Researcher at the Berkeley Risk and Security Lab, focused on building resilient systems at the intersection of tech and policy.
           </p>
-          <p className="text-slate-400 leading-relaxed mb-6">
-            My work is driven by a commitment to **model evaluation and algorithmic accountability**. I believe that as digital architectures become more complex, our methods for ensuring equity and security must become equally sophisticated. I thrive on translating these high-stakes, abstract problems into clean, effective code.
+          <p className="text-slate-400 text-lg leading-relaxed max-w-2xl">
+            I’m driven by a deep curiosity for how digital architectures shape our world—and a commitment towards model evaluation and algorithmic accountability. I thrive on translating complex problems into clean, concise, and effective code.
           </p>
-          <p className="text-slate-400 leading-relaxed mb-8">
-            Beyond the technical, I am a firm believer in the **"Three Cs": Creativity, Curiosity, and Communication**. Whether I am leading a discussion section as a UGSI or collaborating on a creative set, I look for the narrative thread that connects rigorous data with human experience.
+          <p className="text-slate-400 italic text-lg leading-relaxed">
+            In my free time, I enjoy feeding my creative spirit.
           </p>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              to="/research"
-              className="inline-flex items-center gap-2 bg-purple-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-purple-700 transition-colors text-sm"
-            >
-              View Research <ArrowRight size={14} />
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 border border-slate-700 text-slate-300 font-semibold px-5 py-2.5 rounded-lg hover:border-slate-500 transition-colors text-sm"
-            >
-              <Download size={14} /> Download CV
-            </Link>
-          </div>
         </div>
-        <div className="md:w-72">
-          <img
-            src="/headshot.png" 
-            alt="Alexia Gallon"
-            className="w-full rounded-2xl object-cover shadow-2xl border border-slate-800"
-          />
-          <div className="mt-4 flex items-center gap-2 text-slate-500 text-sm">
-            <MapPin size={14} />
-            <span>Berkeley, CA</span>
-          </div>
+        
+        <div className="flex flex-wrap gap-4">
+          <Link
+            to="/about"
+            className="bg-white text-black font-bold px-8 py-4 rounded-full hover:bg-purple-400 transition-all flex items-center gap-2"
+          >
+            About Me <ArrowRight size={18} />
+          </Link>
+          <Link
+            to="/modelling"
+            className="border border-slate-800 text-white font-bold px-8 py-4 rounded-full hover:bg-slate-900 transition-all"
+          >
+            Creative Portfolio
+          </Link>
         </div>
       </div>
 
-      <Separator className="mb-16 bg-slate-800" />
-
-      {/* Skills */}
-      <section className="mb-16">
-        <div className="flex items-center gap-2 mb-8">
-          <Lightbulb size={20} className="text-purple-400" />
-          <h2 className="text-2xl font-bold text-white">Skills & Expertise</h2>
+      {/* Quick Access Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="p-8 rounded-3xl bg-slate-900/50 border border-white/5 hover:border-purple-500/30 transition-colors group">
+          <Code2 className="text-purple-400 mb-6 group-hover:scale-110 transition-transform" size={32} />
+          <h3 className="text-xl font-bold text-white mb-3">Software Engineering</h3>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Translating complex, high-stakes security problems into clean, concise, and effective code.
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {Object.entries(skills).map(([category, items]) => (
-            <div key={category}>
-              <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-4">{category}</h3>
-              <div className="flex flex-wrap gap-2">
-                {items.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="text-sm bg-slate-800 text-slate-300 hover:bg-slate-700 border-none">
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
-      <Separator className="mb-16 bg-slate-800" />
-
-      {/* Timeline */}
-      <section>
-        <h2 className="text-2xl font-bold text-white mb-10">Background</h2>
-        <div className="relative pl-8 border-l-2 border-slate-800 space-y-10">
-          {timeline.map((item) => {
-            const Icon = item.icon
-            return (
-              <div key={item.role} className="relative">
-                <div className="absolute -left-[2.35rem] w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-                  <Icon size={14} className="text-white" />
-                </div>
-                <p className="text-xs text-slate-500 font-semibold uppercase tracking-widest mb-1">{item.year}</p>
-                <h3 className="text-lg font-bold text-white">{item.role}</h3>
-                <p className="text-purple-400 text-sm font-medium mb-2">{item.org}</p>
-                <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            )
-          })}
+        <div className="p-8 rounded-3xl bg-slate-900/50 border border-white/5 hover:border-purple-500/30 transition-colors group">
+          <ShieldCheck className="text-purple-400 mb-6 group-hover:scale-110 transition-transform" size={32} />
+          <h3 className="text-xl font-bold text-white mb-3">Security Research</h3>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Investigating how national security priorities shape emerging technology and international cyber strategy.
+          </p>
         </div>
-      </section>
+
+        <div className="p-8 rounded-3xl bg-slate-900/50 border border-white/5 hover:border-purple-500/30 transition-colors group">
+          <Microscope className="text-purple-400 mb-6 group-hover:scale-110 transition-transform" size={32} />
+          <h3 className="text-xl font-bold text-white mb-3">Model Evaluation</h3>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Developing frameworks for algorithmic accountability and mitigating bias in predictive systems.
+          </p>
+        </div>
+      </div>
     </div>
   )
 }
