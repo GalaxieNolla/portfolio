@@ -33,13 +33,14 @@ function NavLink({ to, label, onClick }: { to: string; label: string; onClick?: 
     <Link
       to={to}
       onClick={onClick}
-      className={`text-sm font-medium transition-all hover:text-white relative py-1 ${
+      className={`text-sm font-medium transition-all hover:text-blue-400 relative py-1 ${
         isActive ? 'text-white' : 'text-slate-400'
       }`}
     >
       {label}
       {isActive && (
-        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-400 rounded-full" />
+        /* Accent: Changed to a sleek Purple-to-Blue gradient */
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" />
       )}
     </Link>
   )
@@ -56,7 +57,6 @@ function Nav() {
           className="flex items-center gap-3 text-white font-bold text-lg tracking-tight hover:opacity-80 transition-opacity"
           onClick={() => setOpen(false)}
         >
-          {/* Fixed Logo: No absolute positioning, no headshot overlap */}
           <img 
             src="/logo.png" 
             alt="Logo" 
@@ -101,8 +101,8 @@ function Footer() {
 
 function RootLayout() {
   return (
-    /* Legibility Fix: Ensure the text is slate-50 (near white) against the slate-950 background */
-    <div className="min-h-screen flex flex-col bg-slate-950 text-slate-50">
+    /* Added selection:bg-purple-500/30 so even highlighted text matches your theme */
+    <div className="min-h-screen flex flex-col bg-slate-950 text-slate-50 selection:bg-purple-500/30">
       <Nav />
       <main className="flex-1">
         <Outlet />
@@ -116,7 +116,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
       <head>
-        {/* This adds your logo to the browser tab */}
         <link rel="icon" type="image/png" href="/logo.png" />
         <HeadContent />
       </head>
