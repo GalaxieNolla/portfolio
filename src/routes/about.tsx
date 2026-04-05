@@ -25,7 +25,7 @@ const timeline = [
     year: '2025 – Present',
     role: 'Research Apprentice',
     org: 'Berkeley Risk and Security Lab (BRSL)',
-    desc: "(1) Analyzing China's 14th Five-Year Plans with Intel Fellow Matthew Studer (2025), (2) tracking Russian & Chinese spyware with Dr. Elaine Korzak (2025), and (3) creating unique solutions address AI integration into nuclear weapons operations with Daniel Kroth.",
+    desc: "(1) Analyzing China's 14th Five-Year Plans with Intel Fellow Matthew Studer, (2) tracking Russian & Chinese spyware with Dr. Elaine Korzak, and (3) creating unique solutions to address AI integration into nuclear weapons operations.",
     icon: Lightbulb,
   },
   {
@@ -39,69 +39,75 @@ const timeline = [
 
 function About() {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-16">
-      {/* Hero Section: Two-Column Layout with Headshot */}
-      <div className="flex flex-col md:flex-row gap-12 items-start mb-16">
+    <div className="max-w-5xl mx-auto px-4 pt-32 pb-20"> {/* Standardized padding */}
+      {/* Hero Section */}
+      <div className="flex flex-col md:flex-row gap-12 items-start mb-24">
         <div className="flex-1">
-          <p className="text-purple-400 font-semibold text-sm uppercase tracking-widest mb-3">About Me</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <p className="text-purple-400 font-semibold text-sm uppercase tracking-[0.3em] mb-4">About Me</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight tracking-tight">
             Data scientist, researcher,<br />and policy analyst.
           </h1>
           <p className="text-slate-300 text-lg leading-relaxed mb-6">
             I'm Alexia Gallon — a Software Engineer and Researcher at the Berkeley Risk and Security Lab, focused on building resilient systems at the intersection of tech and policy.
           </p>
           <p className="text-slate-400 leading-relaxed mb-6">
-            I’m driven by a deep curiosity for how digital architectures shape our world—and a commitment towards model evaluation and algorithmic accountability. I thrive on translating complex problems into clean, concise, and effective code.
+            I’m driven by a deep curiosity for how digital architectures shape our world—and a commitment towards model evaluation and algorithmic accountability.
           </p>
-          <p className="text-slate-400 italic leading-relaxed mb-8">
+          <p className="text-slate-500 italic leading-relaxed mb-10">
             In my free time, I enjoy feeding my creative spirit.
           </p>
-          <div className="flex flex-wrap gap-3">
+          
+          <div className="flex flex-wrap gap-4">
             <Link
               to="/research"
-              className="inline-flex items-center gap-2 bg-purple-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-purple-700 transition-colors text-sm"
+              className="inline-flex items-center gap-2 bg-purple-600 text-white font-bold px-6 py-3 rounded-xl hover:bg-purple-500 transition-all text-sm shadow-lg shadow-purple-500/20"
             >
-              View Research <ArrowRight size={14} />
+              View Research <ArrowRight size={16} />
             </Link>
             <a
               href="/resume.pdf"
               target="_blank"
-              className="inline-flex items-center gap-2 border border-slate-700 text-slate-300 font-semibold px-5 py-2.5 rounded-lg hover:border-slate-500 transition-colors text-sm"
+              className="inline-flex items-center gap-2 border border-white/10 text-slate-300 font-bold px-6 py-3 rounded-xl hover:bg-white/5 transition-all text-sm"
             >
-              <Download size={14} /> Download CV
+              <Download size={16} /> Download CV
             </a>
           </div>
         </div>
 
-        {/* The Headshot that was missing in your screenshot */}
-        <div className="md:w-72">
-          <img
-            src="/headshot.png" 
-            alt="Alexia Gallon"
-            className="w-full rounded-2xl object-cover shadow-2xl border border-slate-800 aspect-[4/5]"
-          />
-          <div className="mt-4 flex items-center gap-2 text-slate-500 text-sm justify-center">
-            <MapPin size={14} />
+        {/* Headshot with hover effect */}
+        <div className="md:w-80 shrink-0">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+            <img
+              src="/headshot.png" 
+              alt="Alexia Gallon"
+              className="relative w-full rounded-2xl object-cover shadow-2xl border border-white/10 aspect-[4/5]"
+            />
+          </div>
+          <div className="mt-6 flex items-center gap-2 text-slate-500 text-xs uppercase tracking-widest justify-center">
+            <MapPin size={14} className="text-purple-500" />
             <span>Berkeley, CA</span>
           </div>
         </div>
       </div>
 
-      <Separator className="mb-16 bg-slate-800" />
+      <Separator className="mb-20 bg-white/5" />
 
       {/* Skills Section */}
-      <section className="mb-16">
-        <div className="flex items-center gap-2 mb-8">
-          <Lightbulb size={20} className="text-purple-400" />
+      <section className="mb-24">
+        <div className="flex items-center gap-3 mb-10">
+          <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center">
+            <Lightbulb size={18} className="text-purple-400" />
+          </div>
           <h2 className="text-2xl font-bold text-white">Skills & Expertise</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {Object.entries(skills).map(([category, items]) => (
             <div key={category}>
-              <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-4">{category}</h3>
+              <h3 className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-6">{category}</h3>
               <div className="flex flex-wrap gap-2">
                 {items.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="text-sm bg-slate-800 text-slate-300 hover:bg-slate-700 border-none">
+                  <Badge key={skill} variant="secondary" className="px-3 py-1 text-xs bg-white/5 text-slate-300 border border-white/5 hover:border-purple-500/30 transition-colors">
                     {skill}
                   </Badge>
                 ))}
@@ -111,23 +117,23 @@ function About() {
         </div>
       </section>
 
-      <Separator className="mb-16 bg-slate-800" />
+      <Separator className="mb-20 bg-white/5" />
 
-      {/* Background/Timeline Section */}
+      {/* Timeline Section */}
       <section>
-        <h2 className="text-2xl font-bold text-white mb-10">Background</h2>
-        <div className="relative pl-8 border-l-2 border-slate-800 space-y-10">
+        <h2 className="text-2xl font-bold text-white mb-12">Background</h2>
+        <div className="relative pl-8 border-l border-white/5 space-y-12">
           {timeline.map((item) => {
             const Icon = item.icon
             return (
-              <div key={item.role} className="relative">
-                <div className="absolute -left-[2.35rem] w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center border-4 border-black">
-                  <Icon size={14} className="text-white" />
+              <div key={`${item.role}-${item.year}`} className="relative group">
+                <div className="absolute -left-[2.55rem] w-10 h-10 bg-[#05050a] border border-white/10 rounded-xl flex items-center justify-center group-hover:border-purple-500 transition-colors">
+                  <Icon size={16} className="text-purple-400" />
                 </div>
-                <p className="text-xs text-slate-500 font-semibold uppercase tracking-widest mb-1">{item.year}</p>
-                <h3 className="text-lg font-bold text-white">{item.role}</h3>
-                <p className="text-purple-400 text-sm font-medium mb-2">{item.org}</p>
-                <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] mb-2">{item.year}</p>
+                <h3 className="text-xl font-bold text-white mb-1">{item.role}</h3>
+                <p className="text-purple-400 text-sm font-semibold mb-4">{item.org}</p>
+                <p className="text-slate-400 text-base leading-relaxed max-w-2xl">{item.desc}</p>
               </div>
             )
           })}
