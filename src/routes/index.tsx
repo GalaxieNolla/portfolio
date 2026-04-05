@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { ArrowRight, Code2, ShieldCheck, Microscope } from 'lucide-react'
+import { ArrowRight, Book, Shield, Camera } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -7,74 +7,128 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   return (
-    <div className="max-w-7xl mx-auto px-4 pt-32 pb-20">
+    <div className="min-h-screen bg-[#05050a] text-white">
       {/* Hero Section */}
-      <div className="max-w-3xl mb-24">
-        <p className="text-purple-400 font-semibold text-sm uppercase tracking-[0.3em] mb-6">
-          Software Engineer & Researcher
-        </p>
-        <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-[1.1]">
-          Building resilient systems at the <span className="text-slate-500">intersection of tech and policy.</span>
-        </h1>
-        
-        {/* Restored Original Bio */}
-        <div className="space-y-6 mb-10">
-          <p className="text-slate-300 text-xl leading-relaxed max-w-2xl">
-            I’m Alexia Gallon — a Software Engineer and Researcher at the Berkeley Risk and Security Lab, focused on building resilient systems at the intersection of tech and policy.
+      <div className="max-w-7xl mx-auto px-4 pt-32 pb-20">
+        <div className="max-w-3xl">
+          <p className="text-purple-500 font-bold text-sm uppercase tracking-[0.4em] mb-4">
+            Researcher • Data Scientist • Educator
           </p>
-          <p className="text-slate-400 text-lg leading-relaxed max-w-2xl">
-            I’m driven by a deep curiosity for how digital architectures shape our world—and a commitment towards model evaluation and algorithmic accountability. I thrive on translating complex problems into clean, concise, and effective code.
+          <h1 className="text-7xl md:text-8xl font-extrabold mb-8 tracking-tight">
+            Alexia <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Gallon</span>
+          </h1>
+          <p className="text-slate-300 text-xl leading-relaxed mb-10 max-w-2xl">
+            I study how algorithmic systems intersect with global security and social equity. 
+            Currently a Data Science & Political Science student at UC Berkeley.
           </p>
-          <p className="text-slate-400 italic text-lg leading-relaxed">
-            In my free time, I enjoy feeding my creative spirit.
+          
+          <div className="flex gap-4 mb-16">
+            <Link
+              to="/about"
+              className="bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-4 rounded-xl flex items-center gap-2 transition-all shadow-[0_0_20px_rgba(147,51,234,0.4)]"
+            >
+              About Me <ArrowRight size={20} />
+            </Link>
+            <Link
+              to="/contact"
+              className="bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold px-8 py-4 rounded-xl transition-all"
+            >
+              Get in Touch
+            </Link>
+          </div>
+
+          <p className="text-slate-500 text-sm">
+            Interested in my work at the lab? <Link to="/research" className="text-purple-400 underline">Research</Link> is for policy and security teams — <Link to="/projects" className="text-blue-400 underline">Teaching</Link> covers my work with Data C104 at Berkeley.
           </p>
-        </div>
-        
-        <div className="flex flex-wrap gap-4">
-          <Link
-            to="/about"
-            className="bg-white text-black font-bold px-8 py-4 rounded-full hover:bg-purple-400 transition-all flex items-center gap-2"
-          >
-            About Me <ArrowRight size={18} />
-          </Link>
-          <Link
-            to="/modelling"
-            className="border border-slate-800 text-white font-bold px-8 py-4 rounded-full hover:bg-slate-900 transition-all"
-          >
-            Creative Portfolio
-          </Link>
         </div>
       </div>
 
-      {/* Restored Original Colored Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Software Engineering - Purple Glow */}
-        <div className="p-8 rounded-3xl bg-purple-500/5 border border-purple-500/10 hover:border-purple-500/40 transition-all group">
-          <Code2 className="text-purple-400 mb-6 group-hover:scale-110 transition-transform" size={32} />
-          <h3 className="text-xl font-bold text-white mb-3">Software Engineering</h3>
-          <p className="text-slate-400 text-sm leading-relaxed">
-            Translating complex, high-stakes security problems into clean, concise, and effective code.
-          </p>
+      {/* Portfolio & Work Section */}
+      <div className="max-w-7xl mx-auto px-4 py-20 border-t border-white/5">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">Portfolio & Work</h2>
+          <p className="text-slate-400 italic font-serif">Bridging technical data science with human-centered policy.</p>
         </div>
 
-        {/* Security Research - Blue Glow */}
-        <div className="p-8 rounded-3xl bg-blue-500/5 border border-blue-500/10 hover:border-blue-500/40 transition-all group">
-          <ShieldCheck className="text-blue-400 mb-6 group-hover:scale-110 transition-transform" size={32} />
-          <h3 className="text-xl font-bold text-white mb-3">Security Research</h3>
-          <p className="text-slate-400 text-sm leading-relaxed">
-            Investigating how national security priorities shape emerging technology and international cyber strategy.
-          </p>
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Research Card - Purple/Blue Gradient */}
+          <div className="rounded-[2.5rem] bg-gradient-to-br from-purple-600 to-blue-500 p-10 flex flex-col h-[400px] justify-between group hover:scale-[1.02] transition-transform shadow-xl">
+            <div>
+              <div className="bg-white/20 w-fit p-3 rounded-xl mb-6">
+                <Book className="text-white" size={28} />
+              </div>
+              <p className="text-white/60 text-xs font-bold uppercase tracking-widest mb-2">Tech Governance</p>
+              <h3 className="text-3xl font-bold text-white mb-4">Research</h3>
+              <p className="text-white/80 leading-relaxed">
+                Exploring the intersection of emerging technology, governance, and international relations.
+              </p>
+            </div>
+            <Link to="/research" className="flex items-center gap-2 text-white font-bold group-hover:translate-x-2 transition-transform">
+              View Research <ArrowRight size={18} />
+            </Link>
+          </div>
 
-        {/* Model Evaluation - Pink Glow */}
-        <div className="p-8 rounded-3xl bg-pink-500/5 border border-pink-500/10 hover:border-pink-500/40 transition-all group">
-          <Microscope className="text-pink-400 mb-6 group-hover:scale-110 transition-transform" size={32} />
-          <h3 className="text-xl font-bold text-white mb-3">Model Evaluation</h3>
-          <p className="text-slate-400 text-sm leading-relaxed">
-            Developing frameworks for algorithmic accountability and mitigating bias in predictive systems.
-          </p>
+          {/* Projects Card - Deep Blue Gradient */}
+          <div className="rounded-[2.5rem] bg-gradient-to-br from-blue-900 to-[#0a1525] p-10 flex flex-col h-[400px] justify-between group hover:scale-[1.02] transition-transform shadow-xl border border-white/5">
+            <div>
+              <div className="bg-white/10 w-fit p-3 rounded-xl mb-6">
+                <Shield className="text-blue-400" size={28} />
+              </div>
+              <p className="text-blue-400/60 text-xs font-bold uppercase tracking-widest mb-2">Software & Systems</p>
+              <h3 className="text-3xl font-bold text-white mb-4">Projects</h3>
+              <p className="text-slate-400 leading-relaxed">
+                Technical systems and software solutions built with Python, Java, and SQL—ranging from data pipelines to cyber training.
+              </p>
+            </div>
+            <Link to="/projects" className="flex items-center gap-2 text-white font-bold group-hover:translate-x-2 transition-transform">
+              View Projects <ArrowRight size={18} />
+            </Link>
+          </div>
+
+          {/* Creative Card - Purple/Pink Gradient */}
+          <div className="rounded-[2.5rem] bg-gradient-to-br from-purple-500 to-pink-500 p-10 flex flex-col h-[400px] justify-between group hover:scale-[1.02] transition-transform shadow-xl">
+            <div>
+              <div className="bg-white/20 w-fit p-3 rounded-xl mb-6">
+                <Camera className="text-white" size={28} />
+              </div>
+              <p className="text-white/60 text-xs font-bold uppercase tracking-widest mb-2">Creative & Performance</p>
+              <h3 className="text-3xl font-bold text-white mb-4">Creative Work</h3>
+              <p className="text-white/80 leading-relaxed">
+                Commercial, editorial, and artistic visual projects.
+              </p>
+            </div>
+            <Link to="/modelling" className="flex items-center gap-2 text-white font-bold group-hover:translate-x-2 transition-transform">
+              View Creative Work <ArrowRight size={18} />
+            </Link>
+          </div>
         </div>
       </div>
+
+      {/* Stats Section */}
+      <div className="max-w-7xl mx-auto px-4 py-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">2026</p>
+            <p className="text-slate-500 text-sm uppercase tracking-widest font-bold">Expected Graduation</p>
+          </div>
+          <div>
+            <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">2</p>
+            <p className="text-slate-500 text-sm uppercase tracking-widest font-bold">Lab Projects</p>
+          </div>
+          <div>
+            <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">100+</p>
+            <p className="text-slate-500 text-sm uppercase tracking-widest font-bold">Students Mentored</p>
+          </div>
+          <div>
+            <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">3.9+</p>
+            <p className="text-slate-500 text-sm uppercase tracking-widest font-bold">Academic Focus</p>
+          </div>
+        </div>
+      </div>
+      
+      <footer className="text-center py-10 border-t border-white/5 text-slate-600 text-xs uppercase tracking-widest">
+        © 2026 Alexia Gallon • Data/Software • Researcher • Creative
+      </footer>
     </div>
   )
 }
