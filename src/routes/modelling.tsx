@@ -5,8 +5,8 @@ export const Route = createFileRoute('/modelling')({
   component: Modelling,
 })
 
-// Gallery items with themed gradients – replace src with real photo paths
-const gallery = [
+// Gallery data defined at the top to avoid "not defined" errors
+const galleryCollections = [
   {
     photographer: "Isaac Alvarez",
     description: "Cinematic portraiture and high-end editorial photography.",
@@ -29,22 +29,31 @@ const gallery = [
   }
 ]
 
-function GalleryCard({ item }: { item: (typeof gallery)[0] }) {
+// We "flatten" the collections so every single image gets its own card in the grid
+const allImages = galleryCollections.flatMap((collection) => 
+  collection.images.map((imgUrl, index) => ({
+    id: `${collection.photographer}-${index}`,
+    url: imgUrl,
+    photographer: collection.photographer,
+    description: collection.description
+  }))
+)
+
+function GalleryCard({ item }: { item: typeof allImages[0] }) {
   return (
-    <div className="relative group rounded-xl overflow-hidden aspect-square md:aspect-auto md:min-h-52">
-      {/* Background Image (using the first image in the array) */}
+    <div className="relative group rounded-xl overflow-hidden aspect-[3/4] border border-zinc-800 bg-zinc-900">
       <img 
-        src={item.images[0]} 
-        alt={item.description} 
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        src={item.url} 
+        alt={`Photo by ${item.photographer}`} 
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
       
-      {/* Overlay on hover */}
-      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-        <span className="text-xs text-amber-400 font-medium uppercase tracking-wider mb-1">
+      {/* Overlay: Visible on hover */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+        <span className="text-xs text-rose-400 font-bold uppercase tracking-widest mb-2">
           {item.photographer}
         </span>
-        <p className="text-white text-sm leading-snug">
+        <p className="text-zinc-200 text-sm leading-relaxed line-clamp-3">
           {item.description}
         </p>
       </div>
@@ -54,92 +63,70 @@ function GalleryCard({ item }: { item: (typeof gallery)[0] }) {
 
 function Modelling() {
   return (
-    <div>
-      {/* Dark hero */}
-      <section className="bg-zinc-950 text-white">
-        <div className="max-w-5xl mx-auto px-4 py-24 md:py-32">
+    <div className="bg-zinc-950 text-zinc-50">
+      {/* Hero Section */}
+      <section className="border-b border-zinc-900">
+        <div className="max-w-6xl mx-auto px-4 py-24 md:py-32">
           <div className="flex items-center gap-3 mb-6">
-            <Camera size={20} className="text-rose-400" />
-            <p className="text-rose-400 font-semibold text-sm uppercase tracking-widest">
+            <Camera size={20} className="text-rose-500" />
+            <p className="text-rose-500 font-bold text-sm uppercase tracking-[0.2em]">
               Creative Portfolio
             </p>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
             Modelling
           </h1>
-          <p className="text-zinc-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-8">
-            Editorial, commercial, and artistic work spanning studio and location shoots.
-            Available for bookings worldwide — collaborating with photographers, brands,
-            and creative agencies.
+          <p className="text-zinc-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
+            Editorial, commercial, and artistic work spanning studio and location shoots. 
+            Available for bookings worldwide.
           </p>
-          <div className="flex flex-wrap gap-6 text-sm text-zinc-500">
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" /> Editorial
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" /> Commercial
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" /> Fashion
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" /> Artistic
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery */}
-      <section className="bg-zinc-900 px-4 py-12">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {gallery.map((item) => (
-              <GalleryCard key={item.id} item={item} />
+          
+          <div className="flex flex-wrap gap-4">
+            {['Editorial', 'Commercial', 'Fashion', 'Artistic'].map((tag) => (
+              <span key={tag} className="px-4 py-1.5 rounded-full border border-zinc-800 text-zinc-400 text-xs font-medium uppercase tracking-wider">
+                {tag}
+              </span>
             ))}
           </div>
-          <p className="text-zinc-600 text-xs text-center mt-6">
-            Full portfolio and high-resolution images available upon request.
+        </div>
+      </section>
+
+      {/* Full Gallery Grid */}
+      <section className="px-4 py-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {allImages.map((img) => (
+              <GalleryCard key={img.id} item={img} />
+            ))}
+          </div>
+          <p className="text-zinc-600 text-xs text-center mt-12 italic">
+            Full high-resolution portfolio available upon request.
           </p>
         </div>
       </section>
 
-      {/* Photographer CTA */}
-      <section className="bg-zinc-950 text-white py-20 px-4">
+      {/* Call to Action */}
+      <section className="py-24 px-4 bg-zinc-900/50">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Work Together</h2>
-          <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-            Available for editorial shoots, brand campaigns, look-books, and artistic collaborations.
-            Experienced with both film and digital formats, indoor studio and outdoor location work.
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Work Together</h2>
+          <p className="text-zinc-400 text-lg mb-10">
+            Currently accepting bookings for brand campaigns and creative collaborations.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-semibold px-7 py-3 rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-bold px-8 py-4 rounded-full transition-all hover:scale-105"
             >
-              <Mail size={16} /> Book a Shoot
+              <Mail size={18} /> Book a Shoot
             </Link>
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-zinc-600 hover:border-zinc-400 text-zinc-300 hover:text-white font-semibold px-7 py-3 rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-2 border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white font-bold px-8 py-4 rounded-full transition-all"
             >
-              <Instagram size={16} /> Instagram
+              <Instagram size={18} /> View Instagram
             </a>
-          </div>
-
-          {/* Stats */}
-          <div className="mt-16 grid grid-cols-3 gap-8 border-t border-zinc-800 pt-12">
-            {[
-              { num: '50+', label: 'Shoots' },
-              { num: '20+', label: 'Photographers' },
-              { num: '5+', label: 'Countries' },
-            ].map((s) => (
-              <div key={s.label}>
-                <p className="text-3xl font-bold text-rose-400 mb-1">{s.num}</p>
-                <p className="text-zinc-500 text-sm">{s.label}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
