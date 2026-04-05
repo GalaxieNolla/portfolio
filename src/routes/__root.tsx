@@ -116,6 +116,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
       <head>
+        {/* This adds your logo to the browser tab */}
+        <link rel="icon" type="image/png" href="/logo.png" />
         <HeadContent />
       </head>
       <body className="antialiased">
