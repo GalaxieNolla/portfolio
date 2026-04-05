@@ -45,7 +45,7 @@ function NavLink({ to, label, onClick }: { to: string; label: string; onClick?: 
     </Link>
   )
 }
-f
+
 function Nav() {
   const [open, setOpen] = useState(false)
 
