@@ -112,11 +112,11 @@ function Index() {
             <p className="text-slate-500 text-sm uppercase tracking-widest font-bold">Expected Graduation</p>
           </div>
           <div>
-            <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">3</p>
-            <p className="text-slate-500 text-sm uppercase tracking-widest font-bold">Publications</p>
+            <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">5</p>
+            <p className="text-slate-500 text-sm uppercase tracking-widest font-bold">Publications & Conferences</p>
           </div>
           <div>
-            <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">100+</p>
+            <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">140+</p>
             <p className="text-slate-500 text-sm uppercase tracking-widest font-bold">Students Mentored</p>
           </div>
           <div>
