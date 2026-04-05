@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { allResearch } from 'content-collections'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { ExternalLink, FileText, ShieldAlert, Globe, Gavel } from 'lucide-react'
+import { ExternalLink, FileText, ShieldAlert, Globe, Gavel, Beaker } from 'lucide-react'
 
 export const Route = createFileRoute('/research')({
   component: Research,
@@ -24,29 +24,37 @@ function Research() {
             className="h-10 w-10 object-contain opacity-80" 
           />
           <p className="text-indigo-600 font-semibold text-sm uppercase tracking-widest">
-            Security & Policy Research
+            Security, Risk & Policy Research
           </p>
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Research Portfolio</h1>
-        <p className="text-slate-600 text-lg max-w-2xl leading-relaxed">
-          Alexia Gallon's work examines the sociotechnical impacts of **predictive policing**, 
-          the evolution of **cyber espionage**, and the shifting landscape of **International Relations**.
-        </p>
+        <div className="space-y-4">
+          <p className="text-slate-600 text-lg max-w-2xl leading-relaxed">
+            Alexia Gallon is currently a **Research Assistant at the Berkeley Risk and Security Lab (BRSL)**, investigating emerging threats in cyber-operational risk and international security.
+          </p>
+          <p className="text-slate-500 text-md max-w-2xl leading-relaxed">
+            Her previous work includes analyzing **predictive policing** algorithms, the evolution of **Chinese cyber espionage**, and comparative labor force policy.
+          </p>
+        </div>
       </div>
 
       {/* Focus Areas */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
+        <div className="p-4 bg-slate-50 border border-slate-100 rounded-lg flex flex-col items-center text-center">
+          <Beaker size={20} className="text-indigo-600 mb-2" />
+          <p className="text-xs font-bold text-slate-800 uppercase tracking-tight">Risk Analysis</p>
+        </div>
         <div className="p-4 bg-slate-50 border border-slate-100 rounded-lg flex flex-col items-center text-center">
           <Gavel size={20} className="text-indigo-600 mb-2" />
-          <p className="text-xs font-bold text-slate-800 uppercase tracking-tight">Predictive Policing</p>
+          <p className="text-xs font-bold text-slate-800 uppercase tracking-tight">Algorithmic Bias</p>
         </div>
         <div className="p-4 bg-slate-50 border border-slate-100 rounded-lg flex flex-col items-center text-center">
           <ShieldAlert size={20} className="text-indigo-600 mb-2" />
-          <p className="text-xs font-bold text-slate-800 uppercase tracking-tight">Cyber Espionage</p>
+          <p className="text-xs font-bold text-slate-800 uppercase tracking-tight">Cyber Security</p>
         </div>
         <div className="p-4 bg-slate-50 border border-slate-100 rounded-lg flex flex-col items-center text-center">
           <Globe size={20} className="text-indigo-600 mb-2" />
-          <p className="text-xs font-bold text-slate-800 uppercase tracking-tight">Intl. Relations</p>
+          <p className="text-xs font-bold text-slate-800 uppercase tracking-tight">Intl. Policy</p>
         </div>
       </div>
 
@@ -93,7 +101,7 @@ function Research() {
           ))
         ) : (
           <div className="text-center py-12 border-2 border-dashed border-slate-200 rounded-xl bg-slate-50/30">
-            <p className="text-slate-500 font-medium">Currently digitizing research findings on Chinese cyber operations and algorithmic bias in law enforcement.</p>
+            <p className="text-slate-500 font-medium">Currently synthesizing research findings from the Berkeley Risk and Security Lab.</p>
           </div>
         )}
       </div>
