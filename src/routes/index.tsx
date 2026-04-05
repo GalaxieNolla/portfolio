@@ -12,7 +12,7 @@ function Index() {
       <div className="max-w-7xl mx-auto px-4 pt-32 pb-20">
         <div className="max-w-3xl">
           <p className="text-purple-500 font-bold text-sm uppercase tracking-[0.4em] mb-4">
-            Researcher • Data Scientist • Educator
+            Data/Software • Researcher • Creative
           </p>
           <h1 className="text-7xl md:text-8xl font-extrabold mb-8 tracking-tight">
             Alexia <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Gallon</span>
@@ -38,7 +38,7 @@ function Index() {
           </div>
 
           <p className="text-slate-500 text-sm">
-            Interested in my work at the lab? <Link to="/research" className="text-purple-400 underline">Research</Link> is for policy and security teams — <Link to="/projects" className="text-blue-400 underline">Teaching</Link> covers my work with Data C104 at Berkeley.
+            Interested in my work at the lab? <Link to="/research" className="text-purple-400 underline">Research</Link> is for recruiters — <Link to="/projects" className="text-blue-400 underline">Projects</Link> covers tech projects.
           </p>
         </div>
       </div>
