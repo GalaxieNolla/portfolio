@@ -139,12 +139,12 @@ function Modelling() {
               <Mail size={18} className="group-hover:-rotate-12 transition-transform" /> Contact for Collaboration
             </Link>
             <a
-              href="https://instagram.com/alexiagallon"
+              href="https://instagram.com/gallon_of_optimism"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-white/10 hover:border-blue-500/50 text-slate-300 hover:text-blue-400 font-bold px-10 py-4 rounded-full transition-all backdrop-blur-sm"
             >
-              <Instagram size={18} /> @alexiagallon
+              <Instagram size={18} /> @gallon_of_optimism
             </a>
           </div>
         </div>
