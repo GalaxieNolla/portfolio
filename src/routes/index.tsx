@@ -125,10 +125,6 @@ function Index() {
           </div>
         </div>
       </div>
-      
-      <footer className="text-center py-10 border-t border-white/5 text-slate-600 text-xs uppercase tracking-widest">
-        © 2026 Alexia Gallon • Data/Software • Researcher • Creative
-      </footer>
     </div>
   )
 }
