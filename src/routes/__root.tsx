@@ -9,7 +9,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'Alexia Gallon — Security Researcher · Developer · Model' },
+      { title: 'Alexia Gallon — Data/Software · Researcher · Creative' },
     ],
   }),
   shellComponent: RootDocument,
@@ -45,7 +45,7 @@ function NavLink({ to, label, onClick }: { to: string; label: string; onClick?: 
     </Link>
   )
 }
-
+f
 function Nav() {
   const [open, setOpen] = useState(false)
 
