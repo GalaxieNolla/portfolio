@@ -108,7 +108,7 @@ function Contact() {
                 name="name"
                 required
                 className="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-slate-400 focus:text-white focus:border-purple-500 outline-none transition-all text-sm autofill:shadow-[inset_0_0_0_1000px_#0f172a]"
-                placeholder="Alexia"
+                placeholder="Your name"
               />
             </div>
 
@@ -122,7 +122,7 @@ function Contact() {
                 name="email"
                 required
                 className="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-slate-400 focus:text-white focus:border-purple-500 outline-none transition-all text-sm autofill:shadow-[inset_0_0_0_1000px_#0f172a]"
-                placeholder="gallon.alexia@gmail.com"
+                placeholder="email@example.com"
               />
             </div>
 
@@ -133,40 +133,4 @@ function Contact() {
               <select
                 id="subject"
                 name="subject"
-                className="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-slate-400 focus:text-white focus:border-purple-500 outline-none transition-all text-sm appearance-none"
-              >
-                <option value="" className="bg-slate-900">Select a topic…</option>
-                <option value="research" className="bg-slate-900">Research Collaboration</option>
-                <option value="engineering" className="bg-slate-900">Software/Cyber Role</option>
-                <option value="modelling" className="bg-slate-900">Creative Shoots</option>
-                <option value="other" className="bg-slate-900">Other</option>
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-slate-400 mb-1.5 uppercase tracking-wider">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows={6}
-                className="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-slate-400 focus:text-white focus:border-purple-500 outline-none transition-all resize-none text-sm"
-                placeholder="Tell me what's on your mind…"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="inline-flex items-center gap-2 px-6 py-4 bg-purple-600 text-white rounded-xl hover:bg-purple-500 transition-all font-bold text-sm w-full justify-center shadow-lg"
-            >
-              <Send size={15} />
-              Send Message
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  )
-}
+                className="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-slate-400 focus:text-
