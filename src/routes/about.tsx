@@ -65,4 +65,30 @@ function About() {
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-
+              className="inline-flex items-center gap-2 border border-slate-700 text-slate-300 font-semibold px-5 py-2.5 rounded-lg hover:border-slate-500 transition-colors text-sm"
+            >
+              <Download size={14} /> Download CV
+            </Link>
+          </div>
+        </div>
+        <div className="md:w-72">
+          {/* Ensure the filename in your public folder matches exactly */}
+          <img
+            src="/headshot.png" 
+            alt="Alexia Gallon"
+            className="w-full rounded-2xl object-cover shadow-2xl border border-slate-800"
+          />
+          <div className="mt-4 flex items-center gap-2 text-slate-500 text-sm">
+            <MapPin size={14} />
+            <span>Berkeley, CA</span>
+          </div>
+        </div>
+      </div>
+
+      <Separator className="mb-16 bg-slate-800" />
+
+      {/* Skills */}
+      <section className="mb-16">
+        <div className="flex items-center gap-2 mb-8">
+          <Lightbulb size={20} className="text-purple-400" />
+          <h2
