@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Instagram, Mail, ArrowRight } from 'lucide-react'
 
-// This matches your file name in the sidebar: 'modelling.tsx'
+// CRITICAL: Ensure this string matches your filename exactly (modelling vs modeling)
 export const Route = createFileRoute('/modelling')({
   component: Modeling,
 })
