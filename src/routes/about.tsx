@@ -51,7 +51,7 @@ function About() {
             I'm Alexia Gallon — a Software Engineer and Researcher at the Berkeley Risk and Security Lab, focused on building resilient systems at the intersection of tech and policy.
           </p>
           <p className="text-slate-400 leading-relaxed mb-6">
-            I’m driven by a deep curiosity for how digital architectures shape our world—and a commitment towards model evaluation and algorithmic accountability. I thrive on translating complex, high-stakes problems into clean, concise, and effective code.
+            I’m driven by a deep curiosity for how digital architectures shape our world—and a commitment towards model evaluation and algorithmic accountability. I thrive on translating complex problems into clean, concise, and effective code.
           </p>
           <p className="text-slate-400 italic leading-relaxed mb-8">
             In my free time, I enjoy feeding my creative spirit.
