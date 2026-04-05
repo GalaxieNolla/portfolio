@@ -76,7 +76,20 @@ function Contact() {
               fetch('https://portfolio-contact.gallon-alexia.workers.dev', { 
                 method: 'POST',
                 body: formData, 
-              }).then(() => setSubmitted(true))
+              })
+              .then(async (res) => {
+                if (res.ok) {
+                  setSubmitted(true);
+                } else {
+                  const errorText = await res.text();
+                  console.error("Worker rejected the request:", errorText);
+                  alert("Worker error: " + errorText);
+                }
+              })
+              .catch(err => {
+                console.error("Network error - could not reach Worker:", err);
+                alert("Network error: Check your internet or URL");
+              });
             }}
             className="space-y-5"
           >
