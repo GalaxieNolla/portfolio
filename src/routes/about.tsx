@@ -39,13 +39,13 @@ const timeline = [
 
 function About() {
   return (
-    <div className="max-w-5xl mx-auto px-4 pt-32 pb-20"> {/* Standardized padding */}
+    <div className="max-w-5xl mx-auto px-4 pt-32 pb-20">
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row gap-12 items-start mb-24">
         <div className="flex-1">
           <p className="text-purple-400 font-semibold text-sm uppercase tracking-[0.3em] mb-4">About Me</p>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight tracking-tight">
-            Data scientist, researcher,<br />and policy analyst.
+            Data scientist, researcher,<br className="hidden md:block" /> and policy analyst.
           </h1>
           <p className="text-slate-300 text-lg leading-relaxed mb-6">
             I'm Alexia Gallon — a Software Engineer and Researcher at the Berkeley Risk and Security Lab, focused on building resilient systems at the intersection of tech and policy.
@@ -67,6 +67,7 @@ function About() {
             <a
               href="/resume.pdf"
               target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-white/10 text-slate-300 font-bold px-6 py-3 rounded-xl hover:bg-white/5 transition-all text-sm"
             >
               <Download size={16} /> Download CV
@@ -74,7 +75,7 @@ function About() {
           </div>
         </div>
 
-        {/* Headshot with hover effect */}
+        {/* Headshot */}
         <div className="md:w-80 shrink-0">
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
