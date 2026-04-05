@@ -13,8 +13,8 @@ const sections = [
     description:
       'Exploring the intersection of emerging technology, governance, and international relations.',
     to: '/research',
-    /* Updated: Indigo to Deep Purple */
-    color: 'from-sky-400 to-blue-500',
+    /* Deep blue */
+    color: 'from-blue-700 to-slate-900',
     badge: 'Tech Governance',
   },
   {
@@ -24,8 +24,8 @@ const sections = [
     description:
       'Technical systems and software solutions built with Python, Java, and SQL—ranging from data pipelines to cyber training.',
     to: '/projects',
-    /* Color: Deep Blue */
-    color: 'from-blue-700 to-slate-900',
+    /* Color: light Blue */
+    color: 'from-sky-400 to-blue-500',
     badge: 'Software & Systems',
   },
   {
@@ -35,8 +35,8 @@ const sections = [
     description:
       'Commercial, editorial, and artistic visual projects.',
     to: '/modeling',
-    /* Color: Electric Blue/Purple */
-    color: 'from-indigo-500 via-purple-600 to-pink-500',
+    /* Color: Purple/pink */
+    color: 'from-purple-600 to-pink-500',
     badge: 'Creative & Performance',
   },
 ]
