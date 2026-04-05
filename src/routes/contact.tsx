@@ -31,7 +31,6 @@ function Contact() {
           </p>
           <button
             onClick={() => setSubmitted(false)}
-            {/* Changed styling to a dark, semi-transparent blue to blend with background */}
             className="px-6 py-2.5 bg-sky-900/20 text-sky-300/80 border border-sky-500/10 rounded-lg hover:bg-sky-900/40 transition-colors text-sm font-medium"
           >
             Send Another Message
@@ -74,8 +73,6 @@ function Contact() {
               e.preventDefault()
               const form = e.currentTarget
               const formData = new FormData(form)
-              
-              {/* Convert FormData to JSON for the Worker */}
               const data = Object.fromEntries(formData.entries())
 
               fetch('https://portfolio-contact.gallon-alexia.workers.dev', { 
