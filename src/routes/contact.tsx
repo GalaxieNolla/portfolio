@@ -29,8 +29,8 @@ function Contact() {
           </p>
           <button
             onClick={() => setSubmitted(false)}
-            className="px-8 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl transition-all font-semibold"
-          >
+            className="px-8 py-3 bg-purple-600 hover:bg-purple-500 text-white rounded-xl transition-all font-semibold shadow-[0_0_20px_rgba(168,85,247,0.3)]"
+            >
             Send Another Message
           </button>
         </div>
