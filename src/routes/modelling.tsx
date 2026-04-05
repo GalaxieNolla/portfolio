@@ -6,14 +6,14 @@ export const Route = createFileRoute('/modelling')({
 })
 
 const gallery = [
-  { src: '/images/modelling/diamond.png', photographer: 'Isaac Alvarez' },
-  { src: '/images/modelling/side%20profile.png', photographer: 'Isaac Alvarez' },
-  { src: '/images/modelling/editorial.png', photographer: 'Isaac Alvarez' },
-  { src: '/images/modelling/wrap.png', photographer: 'Dino Corti' },
-  { src: '/images/modelling/boom.png', photographer: 'Dino Corti' },
-  { src: '/images/modelling/ribbon.png', photographer: 'Dino Corti' },
-  { src: '/images/modelling/hair%20outside.png', photographer: 'Isaac Alvarez' },
-  { src: '/images/modelling/window.png', photographer: 'Isaac Alvarez' },
+  { src: '/images/modelling/diamond.png', photographer: 'Dino Corti, @therealdinocorti' },
+  { src: '/images/modelling/side%20profile.png', photographer: 'Isaac Alvarez, @isaacealvarez' },
+  { src: '/images/modelling/editorial.png', photographer: 'Isaac Alvarez, @isaacealvarez' },
+  { src: '/images/modelling/wrap.png', photographer: 'Dino Corti, @therealdinocorti' },
+  { src: '/images/modelling/boom.png', photographer: 'Dino Corti, @therealdinocorti' },
+  { src: '/images/modelling/ribbon.png', photographer: 'Dino Corti, @therealdinocorti' },
+  { src: '/images/modelling/hair%20outside.png', photographer: 'Isaac Alvarez, @isaacealvarez' },
+  { src: '/images/modelling/window.png', photographer: 'Isaac Alvarez, @isaacealvarez' },
 ]
 
 function Modeling() {
