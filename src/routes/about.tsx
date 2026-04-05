@@ -78,9 +78,9 @@ function About() {
           </div>
         </div>
         <div className="md:w-72">
-          {/* Ensure your image is in /public/headshot.jpg */}
+          {/* image from public*/}
           <img
-            src="/headshot.jpg" 
+            src="/headshot.png" 
             alt="Alexia Gallon"
             className="w-full rounded-2xl object-cover shadow-2xl border border-slate-800"
           />
