@@ -25,7 +25,7 @@ function Contact() {
           </div>
           <h2 className="text-2xl font-bold text-slate-900 mb-2">Message Sent!</h2>
           <p className="text-slate-600 mb-6">
-            Thanks for reaching out. A reply will be on its way shortly.
+            Thanks for reaching out! I'll send a reply back to you soon. -AG
           </p>
           <button
             onClick={() => setSubmitted(false)}
@@ -46,8 +46,7 @@ function Contact() {
           <p className="text-indigo-600 font-semibold text-sm uppercase tracking-widest mb-3">Get in Touch</p>
           <h1 className="text-4xl font-bold text-slate-900 mb-5">Contact</h1>
           <p className="text-slate-600 leading-relaxed mb-8">
-            Whether you're a recruiter, a researcher, a photographer, or just curious —
-            all messages are welcome. Expect a reply within 2–3 business days.
+            Whether you're a recruiter, creative, scholar, etc, feel free to reach out! Turnaround time is 2-3 business days.
           </p>
 
           <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-4">
@@ -76,12 +75,9 @@ function Contact() {
               e.preventDefault()
               const form = e.currentTarget
               const formData = new FormData(form)
-              fetch('/contact.html', {
+              fetch('/api/submit-contact', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(
-                  formData as unknown as Record<string, string>,
-                ).toString(),
+                body: formData,
               }).then(() => setSubmitted(true))
             }}
             className="space-y-5"
