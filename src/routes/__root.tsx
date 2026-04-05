@@ -94,7 +94,7 @@ function Nav() {
 function Footer() {
   return (
     <footer className="bg-slate-900 border-t border-slate-800 text-slate-500 text-xs text-center py-10 mt-auto">
-      <p>© {new Date().getFullYear()} Alexia Gallon · Security Researcher · Developer · Model</p>
+      <p>© {new Date().getFullYear()} Alexia Gallon · Data/Software · Researcher · Creative</p>
     </footer>
   )
 }
