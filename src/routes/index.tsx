@@ -79,8 +79,8 @@ function Home() {
       {/* Portfolio & Stats Section (Combined with Deep Purple Background) */}
       <div className="bg-[#0f071a] border-t border-white/5">
         <section className="max-w-6xl mx-auto px-4 py-20">
-          <h2 className="text-3xl font-bold text-white mb-2 text-center">Portfolio & Work</h2>
-          <p className="text-purple-400/60 text-center mb-12 italic">Bridging technical data science with human-centered policy.</p>
+          <h2 className="text-3xl font-bold text-white mb-2 text-center">Portfolio & Experience</h2>
+          <p className="text-purple-400/60 text-center mb-12 italic">Translating Theory into Impact.</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {sections.map((s) => {
