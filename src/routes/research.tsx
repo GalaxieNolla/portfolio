@@ -21,40 +21,40 @@ function Research() {
           <img 
             src="/logo.png" 
             alt="Logo" 
-            className="h-10 w-10 object-contain opacity-80" 
+            className="h-10 w-10 object-contain opacity-90" 
           />
-          <p className="text-indigo-600 font-semibold text-sm uppercase tracking-widest">
+          <p className="text-purple-400 font-semibold text-sm uppercase tracking-widest">
             Security, Risk & Policy Research
           </p>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Research Portfolio</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Research Portfolio</h1>
         <div className="space-y-4">
-          <p className="text-slate-600 text-lg max-w-2xl leading-relaxed">
-            Alexia Gallon is currently a **Research Assistant at the Berkeley Risk and Security Lab (BRSL)**, investigating emerging threats in cyber-operational risk and international security.
+          <p className="text-slate-300 text-lg max-w-2xl leading-relaxed">
+            Alexia Gallon is currently a <strong className="text-white">Research Assistant at the Berkeley Risk and Security Lab (BRSL)</strong>, investigating emerging threats in cyber-operational risk and international security.
           </p>
-          <p className="text-slate-500 text-md max-w-2xl leading-relaxed">
-            Her previous work includes analyzing **predictive policing** algorithms, the evolution of **Chinese cyber espionage**, and comparative labor force policy.
+          <p className="text-slate-400 text-md max-w-2xl leading-relaxed">
+            Her previous work includes analyzing <strong className="text-slate-200">predictive policing</strong> algorithms, the evolution of <strong className="text-slate-200">Chinese cyber espionage</strong>, and comparative labor force policy.
           </p>
         </div>
       </div>
 
       {/* Focus Areas */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
-        <div className="p-4 bg-slate-50 border border-slate-100 rounded-lg flex flex-col items-center text-center">
-          <Beaker size={20} className="text-indigo-600 mb-2" />
-          <p className="text-xs font-bold text-slate-800 uppercase tracking-tight">Risk Analysis</p>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div className="p-4 bg-slate-900/50 border border-slate-800 rounded-lg flex flex-col items-center text-center">
+          <Beaker size={20} className="text-purple-400 mb-2" />
+          <p className="text-xs font-bold text-slate-200 uppercase tracking-tight">Risk Analysis</p>
         </div>
-        <div className="p-4 bg-slate-50 border border-slate-100 rounded-lg flex flex-col items-center text-center">
-          <Gavel size={20} className="text-indigo-600 mb-2" />
-          <p className="text-xs font-bold text-slate-800 uppercase tracking-tight">Algorithmic Bias</p>
+        <div className="p-4 bg-slate-900/50 border border-slate-800 rounded-lg flex flex-col items-center text-center">
+          <Gavel size={20} className="text-purple-400 mb-2" />
+          <p className="text-xs font-bold text-slate-200 uppercase tracking-tight">Algorithmic Bias</p>
         </div>
-        <div className="p-4 bg-slate-50 border border-slate-100 rounded-lg flex flex-col items-center text-center">
-          <ShieldAlert size={20} className="text-indigo-600 mb-2" />
-          <p className="text-xs font-bold text-slate-800 uppercase tracking-tight">Cyber Security</p>
+        <div className="p-4 bg-slate-900/50 border border-slate-800 rounded-lg flex flex-col items-center text-center">
+          <ShieldAlert size={20} className="text-purple-400 mb-2" />
+          <p className="text-xs font-bold text-slate-200 uppercase tracking-tight">Cyber Security</p>
         </div>
-        <div className="p-4 bg-slate-50 border border-slate-100 rounded-lg flex flex-col items-center text-center">
-          <Globe size={20} className="text-indigo-600 mb-2" />
-          <p className="text-xs font-bold text-slate-800 uppercase tracking-tight">Intl. Policy</p>
+        <div className="p-4 bg-slate-900/50 border border-slate-800 rounded-lg flex flex-col items-center text-center">
+          <Globe size={20} className="text-purple-400 mb-2" />
+          <p className="text-xs font-bold text-slate-200 uppercase tracking-tight">Intl. Policy</p>
         </div>
       </div>
 
@@ -62,36 +62,36 @@ function Research() {
       <div className="space-y-6">
         {papers.length > 0 ? (
           papers.map((paper) => (
-            <Card key={paper._meta.path} className="border-slate-200 hover:shadow-md transition-shadow">
+            <Card key={paper._meta.path} className="bg-slate-900/40 border-slate-800 hover:border-slate-700 transition-colors shadow-2xl">
               <CardHeader className="pb-3">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2 text-xs text-slate-400">
-                      <span className="font-semibold text-indigo-600 uppercase tracking-wider">{paper.venue || 'Research Report'}</span>
+                    <div className="flex items-center gap-2 mb-2 text-xs text-slate-500">
+                      <span className="font-semibold text-purple-400 uppercase tracking-wider">{paper.venue || 'Research Report'}</span>
                       <span>•</span>
                       <span>{new Date(paper.date).getFullYear()}</span>
                     </div>
-                    <CardTitle className="text-xl leading-snug">{paper.title}</CardTitle>
+                    <CardTitle className="text-xl leading-snug text-white">{paper.title}</CardTitle>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 leading-relaxed mb-4 text-sm">{paper.description}</p>
+                <p className="text-slate-400 leading-relaxed mb-4 text-sm">{paper.description}</p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {paper.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="text-[10px] uppercase font-bold bg-slate-100">
+                    <Badge key={tag} variant="secondary" className="text-[10px] uppercase font-bold bg-slate-800 text-slate-300 border-none">
                       {tag}
                     </Badge>
                   ))}
                 </div>
                 <div className="flex gap-4">
                   {paper.pdf && (
-                    <a href={paper.pdf} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
+                    <a href={paper.pdf} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300 font-medium transition-colors">
                       <FileText size={14} /> View Analysis
                     </a>
                   )}
                   {paper.externalUrl && (
-                    <a href={paper.externalUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 font-medium transition-colors">
+                    <a href={paper.externalUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white font-medium transition-colors">
                       <ExternalLink size={14} /> Source Link
                     </a>
                   )}
@@ -100,8 +100,8 @@ function Research() {
             </Card>
           ))
         ) : (
-          <div className="text-center py-12 border-2 border-dashed border-slate-200 rounded-xl bg-slate-50/30">
-            <p className="text-slate-500 font-medium">Currently synthesizing research findings from the Berkeley Risk and Security Lab.</p>
+          <div className="text-center py-12 border-2 border-dashed border-slate-800 rounded-xl bg-slate-900/20">
+            <p className="text-slate-500 font-medium px-4">Currently synthesizing research findings from the Berkeley Risk and Security Lab.</p>
           </div>
         )}
       </div>
