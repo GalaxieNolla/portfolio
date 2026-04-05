@@ -16,23 +16,23 @@ const skills = {
 const timeline = [
   {
     year: '2025 – Present',
-    role: 'Data C104 UGSI / Reader',
+    role: 'Data C104 UGSI / Teaching Assistant',
     org: 'UC Berkeley CDSS',
-    desc: 'Leading discussion sections on algorithmic accountability and evaluating student research on AI ethics.',
+    desc: 'Leading discussion sections on algorithmic accountability, the principle-practice gap, and ethics.',
     icon: GraduationCap,
   },
   {
     year: '2025 – Present',
     role: 'Research Apprentice',
-    org: 'Berkeley Risk and Security Lab',
-    desc: "Analyzing China's 14th Five-Year Plans and tracking emerging tech priorities under Dr. Elaine Korzak.",
+    org: 'Berkeley Risk and Security Lab (BRSL)',
+    desc: "(1) Analyzing China's 14th Five-Year Plans with Intel Fellow Matthew Studer (2025), (2) tracking Russian & Chinese spyware with Dr. Elaine Korzak (2025), and (3) creating unique solutions address AI integration into nuclear weapons operations with Daniel Kroth.",
     icon: Lightbulb,
   },
   {
-    year: '2021 – Present',
-    role: 'BA Data Science & Political Science',
+    year: '2022 – Present',
+    role: 'B.A. Data Science & Political Science',
     org: 'UC Berkeley',
-    desc: 'Focused on the intersection of national security, algorithmic bias, and human-computer interaction.',
+    desc: 'Focused on the intersection of technology, policy, and human-computer interaction.',
     icon: GraduationCap,
   },
 ]
