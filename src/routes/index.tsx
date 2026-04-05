@@ -55,8 +55,11 @@ function Home() {
           </h1>
           
           <p className="text-slate-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
-            I study how algorithmic systems intersect with global security and social equity. 
-            Currently a Data Science & Political Science student at UC Berkeley.
+            Software Engineer and Researcher at the Berkeley Risk and Security Lab, focused on building resilient systems at the intersection of tech and policy. 
+            I’m driven by a deep curiosity for how digital architectures shape our world—and a commitment towards model evaluation & algorithmic accountability. 
+            I thrive on translating complex, high-stakes problems into clean, concise, and effective code. <br />
+
+            In my free time, I enjoy feeding my creative spirit.
           </p>
           
           <div className="flex flex-wrap gap-4">
