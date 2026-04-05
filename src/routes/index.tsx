@@ -68,8 +68,7 @@ function Home() {
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 border border-slate-700 text-slate-300 font-semibold px-6 py-3 rounded-lg hover:border-blue-500 hover:text-white transition-colors"
-            >
+              className="inline-flex items-center gap-2 border border-purple-800/60 bg-purple-950/20 text-purple-300 font-semibold px-6 py-3 rounded-lg hover:bg-purple-900/40 hover:text-white hover:border-purple-600 transition-colors shadow-inner shadow-purple-900/30"
               Get in Touch
             </Link>
           </div>
