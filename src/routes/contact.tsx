@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
-import { Mail, Send, BookOpen, Code2, Camera } from 'lucide-react'
+import { Mail, Send, BookOpen, Code2, Camera, ChevronDown } from 'lucide-react'
 
 export const Route = createFileRoute('/contact')({
   component: Contact,
@@ -39,11 +39,11 @@ function Contact() {
   }
 
   return (
-    <div className="min-h-screen bg-[#05050a] flex flex-col justify-center">
+    <div className="min-h-screen bg-[#05050a] flex flex-col justify-center pt-20">
       <div className="max-w-7xl mx-auto px-4 w-full py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           
-          {/* Left Column: Context (Spans 5/12) */}
+          {/* Left Column */}
           <div className="lg:col-span-5 pt-4">
             <p className="text-purple-500 font-bold text-sm uppercase tracking-[0.3em] mb-4">
               Get in Touch
@@ -72,7 +72,7 @@ function Contact() {
             </div>
           </div>
 
-          {/* Right Column: The Form (Spans 7/12) */}
+          {/* Right Column: The Form */}
           <div className="lg:col-span-7 bg-white/[0.02] border border-white/5 p-8 lg:p-12 rounded-[2.5rem] shadow-2xl">
             <form
               onSubmit={(e) => {
@@ -96,7 +96,7 @@ function Contact() {
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">
+                  <label htmlFor="name" className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">
                     Name
                   </label>
                   <input
@@ -105,4 +105,71 @@ function Contact() {
                     name="name"
                     required
                     placeholder="Your name"
-                    className="w-full px-5 py-4 bg-slate-900/50 border border-white/5 rounded-2xl text-white placeholder:text-slate-600 focus:text-white focus:bg-slate-900 focus:border-purple-500
+                    className="w-full px-5 py-4 bg-slate-900/50 border border-white/5 rounded-2xl text-white placeholder:text-slate-600 focus:text-white focus:bg-slate-900 focus:border-purple-500 outline-none transition-all text-sm"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="your@email.com"
+                    className="w-full px-5 py-4 bg-slate-900/50 border border-white/5 rounded-2xl text-white placeholder:text-slate-600 focus:text-white focus:bg-slate-900 focus:border-purple-500 outline-none transition-all text-sm"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">
+                  Subject
+                </label>
+                <div className="relative">
+                  <select
+                    id="subject"
+                    name="subject"
+                    required
+                    defaultValue=""
+                    className="w-full px-5 py-4 bg-slate-900/50 border border-white/5 rounded-2xl text-white focus:bg-slate-900 focus:border-purple-500 outline-none transition-all text-sm appearance-none cursor-pointer"
+                  >
+                    <option value="" disabled>What are we discussing?</option>
+                    <option value="research" className="bg-slate-900">Research Collaboration</option>
+                    <option value="engineering" className="bg-slate-900">Software / Data Roles</option>
+                    <option value="creative" className="bg-slate-900">Creative Booking</option>
+                    <option value="other" className="bg-slate-900">Other Inquiries</option>
+                  </select>
+                  <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" size={16} />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={5}
+                  placeholder="Tell me about your project..."
+                  className="w-full px-5 py-4 bg-slate-900/50 border border-white/5 rounded-2xl text-white placeholder:text-slate-600 focus:text-white focus:bg-slate-900 focus:border-purple-500 outline-none transition-all resize-none text-sm"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full group relative flex items-center justify-center gap-3 px-8 py-5 bg-purple-600 hover:bg-purple-500 text-white rounded-2xl transition-all font-bold text-sm shadow-[0_0_30px_rgba(147,51,234,0.3)]"
+              >
+                <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
