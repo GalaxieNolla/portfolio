@@ -75,7 +75,6 @@ function Modeling() {
             />
             
             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-              <p className="text-white text-xl font-bold mb-1">{item.title}</p>
               <p className="text-purple-400 text-sm font-medium tracking-wide">
                 Photo by {item.photographer}
               </p>
