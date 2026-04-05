@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Instagram, Mail, ArrowRight } from 'lucide-react'
 
-export const Route = createFileRoute('/modeling')({
+// Line below updated to match your file name 'modelling.tsx'
+export const Route = createFileRoute('/modelling')({
   component: Modeling,
 })
 
@@ -27,7 +28,7 @@ function Modeling() {
           </p>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-8">Modeling & Performance</h1>
           
-          <div className="flex gap-4">
+          <div className="flex gap-6">
             <a 
               href="https://instagram.com/gallon_of_optimism" 
               target="_blank" 
@@ -45,7 +46,7 @@ function Modeling() {
           </div>
         </div>
 
-        <div className="space-y-6 text-slate-300 text-lg leading-relaxed">
+        <div className="space-y-6 text-slate-300 text-lg leading-relaxed border-l border-white/5 pl-8">
           <p>
             As an emerging actress with a foundation in stage theater and short film, I am expanding my creative reach into the editorial and fashion landscape. I view myself as a <span className="text-white font-medium">blank canvas</span>—an anchor that translates a team's collective vision into a tangible narrative through movement, presence, and expressive storytelling.
           </p>
@@ -83,6 +84,3 @@ function Modeling() {
           </div>
         ))}
       </div>
-    </div>
-  )
-}
