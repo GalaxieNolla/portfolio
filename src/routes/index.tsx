@@ -16,10 +16,18 @@ function Index() {
         <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-[1.1]">
           Building resilient systems at the <span className="text-slate-500">intersection of tech and policy.</span>
         </h1>
-        <p className="text-slate-400 text-xl leading-relaxed mb-10 max-w-2xl">
-          I’m Alexia Gallon. Based at the Berkeley Risk and Security Lab, I specialize in 
-          algorithmic accountability, model evaluation, and the ethical evolution of digital architectures.
-        </p>
+        
+        <div className="space-y-6 mb-10">
+          <p className="text-slate-300 text-xl leading-relaxed max-w-2xl">
+            I’m Alexia Gallon — a Software Engineer and Researcher at the Berkeley Risk and Security Lab, focused on building resilient systems at the intersection of tech and policy.
+          </p>
+          <p className="text-slate-400 text-lg leading-relaxed max-w-2xl">
+            I’m driven by a deep curiosity for how digital architectures shape our world—and a commitment towards model evaluation and algorithmic accountability. I thrive on translating complex problems into clean, concise, and effective code.
+          </p>
+          <p className="text-slate-400 italic text-lg leading-relaxed">
+            In my free time, I enjoy feeding my creative spirit.
+          </p>
+        </div>
         
         <div className="flex flex-wrap gap-4">
           <Link
