@@ -51,7 +51,7 @@ function Home() {
         
         <div className="relative max-w-6xl mx-auto px-4 py-28 md:py-40">
           <p className="text-purple-400 text-sm font-semibold uppercase tracking-[0.3em] mb-4">
-            Researcher · Data Scientist · Educator
+            Data/Software · Researcher · Creative
           </p>
           
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
