@@ -17,6 +17,7 @@ function Index() {
           Building resilient systems at the <span className="text-slate-500">intersection of tech and policy.</span>
         </h1>
         
+        {/* Restored Original Bio */}
         <div className="space-y-6 mb-10">
           <p className="text-slate-300 text-xl leading-relaxed max-w-2xl">
             I’m Alexia Gallon — a Software Engineer and Researcher at the Berkeley Risk and Security Lab, focused on building resilient systems at the intersection of tech and policy.
@@ -45,9 +46,9 @@ function Index() {
         </div>
       </div>
 
-      {/* The Colored Quick Access Grid */}
+      {/* Restored Original Colored Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Software Engineering - Purple */}
+        {/* Software Engineering - Purple Glow */}
         <div className="p-8 rounded-3xl bg-purple-500/5 border border-purple-500/10 hover:border-purple-500/40 transition-all group">
           <Code2 className="text-purple-400 mb-6 group-hover:scale-110 transition-transform" size={32} />
           <h3 className="text-xl font-bold text-white mb-3">Software Engineering</h3>
@@ -56,7 +57,7 @@ function Index() {
           </p>
         </div>
 
-        {/* Security Research - Blue */}
+        {/* Security Research - Blue Glow */}
         <div className="p-8 rounded-3xl bg-blue-500/5 border border-blue-500/10 hover:border-blue-500/40 transition-all group">
           <ShieldCheck className="text-blue-400 mb-6 group-hover:scale-110 transition-transform" size={32} />
           <h3 className="text-xl font-bold text-white mb-3">Security Research</h3>
@@ -65,7 +66,7 @@ function Index() {
           </p>
         </div>
 
-        {/* Model Evaluation - Pink */}
+        {/* Model Evaluation - Pink Glow */}
         <div className="p-8 rounded-3xl bg-pink-500/5 border border-pink-500/10 hover:border-pink-500/40 transition-all group">
           <Microscope className="text-pink-400 mb-6 group-hover:scale-110 transition-transform" size={32} />
           <h3 className="text-xl font-bold text-white mb-3">Model Evaluation</h3>
