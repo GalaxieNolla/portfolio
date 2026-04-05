@@ -38,7 +38,7 @@ function Index() {
           </div>
 
           <p className="text-slate-500 text-sm">
-            Interested in my work at the lab? <Link to="/research" className="text-purple-400 underline">Research</Link> is for recruiters — <Link to="/projects" className="text-blue-400 underline">Projects</Link> covers tech projects.
+            Interested in my work? <Link to="/research" className="text-purple-400 underline">Research</Link> is for scholars, and <Link to="/projects" className="text-blue-400 underline">Projects</Link> covers my software projects.
           </p>
         </div>
       </div>
