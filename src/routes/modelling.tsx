@@ -6,14 +6,14 @@ export const Route = createFileRoute('/modelling')({
 })
 
 const gallery = [
-  { src: '/images/modelling/diamond.png', photographer: 'Dino Corti, @therealdinocorti' },
-  { src: '/images/modelling/side%20profile.png', photographer: 'Isaac Alvarez, @isaacealvarez' },
-  { src: '/images/modelling/editorial.png', photographer: 'Isaac Alvarez, @isaacealvarez' },
-  { src: '/images/modelling/wrap.png', photographer: 'Dino Corti, @therealdinocorti' },
-  { src: '/images/modelling/boom.png', photographer: 'Dino Corti, @therealdinocorti' },
-  { src: '/images/modelling/ribbon.png', photographer: 'Dino Corti, @therealdinocorti' },
-  { src: '/images/modelling/hair%20outside.png', photographer: 'Isaac Alvarez, @isaacealvarez' },
-  { src: '/images/modelling/window.png', photographer: 'Isaac Alvarez, @isaacealvarez' },
+  { src: '/images/modelling/diamond.png', photographer: 'Dino Corti', handle: '@therealdinocorti' },
+  { src: '/images/modelling/side%20profile.png', photographer: 'Isaac Alvarez', handle: '@isaacealvarez' },
+  { src: '/images/modelling/editorial.png', photographer: 'Isaac Alvarez', handle: '@isaacealvarez' },
+  { src: '/images/modelling/wrap.png', photographer: 'Dino Corti', handle: '@therealdinocorti' },
+  { src: '/images/modelling/boom.png', photographer: 'Dino Corti', handle: '@therealdinocorti' },
+  { src: '/images/modelling/ribbon.png', photographer: 'Dino Corti', handle: '@therealdinocorti' },
+  { src: '/images/modelling/hair%20outside.png', photographer: 'Isaac Alvarez', handle: '@isaacealvarez' },
+  { src: '/images/modelling/window.png', photographer: 'Isaac Alvarez', handle: '@isaacealvarez' },
 ]
 
 function Modeling() {
@@ -78,6 +78,14 @@ function Modeling() {
               <p className="text-purple-400 text-sm font-medium tracking-wide">
                 Photo by {item.photographer}
               </p>
+              {item.handle && (
+                <div className="flex items-center gap-1.5 mt-1">
+                  <Instagram size={12} className="text-purple-400/80" />
+                  <p className="text-purple-400 text-xs">
+                    {item.handle}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         ))}
