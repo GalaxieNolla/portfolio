@@ -72,7 +72,6 @@ function About() {
           </div>
         </div>
         <div className="md:w-72">
-          {/* Ensure the filename in your public folder matches exactly */}
           <img
             src="/headshot.png" 
             alt="Alexia Gallon"
@@ -91,4 +90,46 @@ function About() {
       <section className="mb-16">
         <div className="flex items-center gap-2 mb-8">
           <Lightbulb size={20} className="text-purple-400" />
-          <h2
+          <h2 className="text-2xl font-bold text-white">Skills & Expertise</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {Object.entries(skills).map(([category, items]) => (
+            <div key={category}>
+              <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-4">{category}</h3>
+              <div className="flex flex-wrap gap-2">
+                {items.map((skill) => (
+                  <Badge key={skill} variant="secondary" className="text-sm bg-slate-800 text-slate-300 hover:bg-slate-700 border-none">
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <Separator className="mb-16 bg-slate-800" />
+
+      {/* Timeline */}
+      <section>
+        <h2 className="text-2xl font-bold text-white mb-10">Background</h2>
+        <div className="relative pl-8 border-l-2 border-slate-800 space-y-10">
+          {timeline.map((item) => {
+            const Icon = item.icon
+            return (
+              <div key={item.role} className="relative">
+                <div className="absolute -left-[2.35rem] w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                  <Icon size={14} className="text-white" />
+                </div>
+                <p className="text-xs text-slate-500 font-semibold uppercase tracking-widest mb-1">{item.year}</p>
+                <h3 className="text-lg font-bold text-white">{item.role}</h3>
+                <p className="text-purple-400 text-sm font-medium mb-2">{item.org}</p>
+                <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+    </div>
+  )
+}
