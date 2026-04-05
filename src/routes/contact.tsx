@@ -75,9 +75,9 @@ function Contact() {
               e.preventDefault()
               const form = e.currentTarget
               const formData = new FormData(form)
-              fetch('/api/submit-contact', {
+              fetch('https://portfolio-contact.gallon-alexia.workers.dev', { 
                 method: 'POST',
-                body: formData,
+                body: formData, 
               }).then(() => setSubmitted(true))
             }}
             className="space-y-5"
