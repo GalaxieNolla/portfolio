@@ -50,7 +50,7 @@ function Modeling() {
             As an emerging actress with a foundation in stage theater and short film, I am expanding my creative reach into the <span className="text-white">commercial, editorial, and fashion landscape</span>. I view myself as a <span className="text-white font-medium">blank canvas</span>—an anchor that translates a vision into a visual narrative through movement, presence, and hues.
           </p>
           <p>
-            I am currently focused on portfolio development through high-level collaboration. Whether the project is commercial, editorial, or experimental, I thrive in environments where photographers, stylists, and directors seek a dedicated professional to bring their concepts to life.
+            Currently open for collaborations -- whether it is for shoots, film, or other creative projects!
           </p>
           <Link 
             to="/contact" 
