@@ -20,12 +20,14 @@ function Contact() {
     return (
       <div className="min-h-[60vh] flex items-center justify-center px-4">
         <div className="text-center max-w-md mx-auto">
-          <div className="w-16 h-16 bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-5">
-            <Mail className="w-8 h-8 text-green-400" />
+          <div className="w-16 h-16 bg-sky-500/20 rounded-full flex items-center justify-center mx-auto mb-5">
+            <Mail className="w-8 h-8 text-sky-400" />
           </div>
           <h2 className="text-2xl font-bold text-white mb-2">Message Sent!</h2>
           <p className="text-slate-300 mb-6">
-            Thanks for reaching out! I'll send a reply back to you soon. -AG
+            Thanks for reaching out!<br />
+            I'll send a reply back to you soon. <br />
+            -AG
           </p>
           <button
             onClick={() => setSubmitted(false)}
