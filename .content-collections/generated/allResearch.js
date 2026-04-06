@@ -10,6 +10,7 @@ export default [
       "Algorithmic Bias",
       "Criminal Justice"
     ],
+    "externalUrl": "https://www.researchgate.net/publication/393954106_Racism_Repeats_Itself_AI_Racial_Bias_in_Predictive_Policing_Algorithms",
     "authors": [
       "Alexia Gallon"
     ],
@@ -33,6 +34,7 @@ export default [
       "Labor Migration",
       "Comparative Politics"
     ],
+    "externalUrl": "https://www.researchgate.net/publication/393948189_Explaining_Foreign_Worker_Disparities_Japan_Versus_the_UK",
     "authors": [
       "Alexia Gallon"
     ],
