@@ -24,16 +24,16 @@ function Research() {
             className="h-10 w-10 object-contain opacity-90" 
           />
           <p className="text-purple-400 font-semibold text-sm uppercase tracking-widest">
-            Security, Risk & Policy Research
+            Security, Tech, & Policy Research
           </p>
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Research Portfolio</h1>
         <div className="space-y-4">
           <p className="text-slate-300 text-lg max-w-2xl leading-relaxed">
-            Alexia Gallon is currently a <strong className="text-white">Research Assistant at the Berkeley Risk and Security Lab (BRSL)</strong>, investigating emerging threats in cyber-operational risk and international security.
+            I am currently a <strong className="text-white">Research Assistant at the Berkeley Risk and Security Lab (BRSL)</strong>, investigating emerging cyber threats and AI-integration into nuclear weapons systems.
           </p>
           <p className="text-slate-400 text-md max-w-2xl leading-relaxed">
-            Her previous work includes analyzing <strong className="text-slate-200">predictive policing</strong> algorithms, the evolution of <strong className="text-slate-200">Chinese cyber espionage</strong>, and comparative labor force policy.
+            My previous work has analyzed <strong className="text-slate-200">predictive policing</strong> algorithms, the evolution of <strong className="text-slate-200">Chinese cyber espionage</strong>, and comparative labor force policy.
           </p>
         </div>
       </div>
@@ -50,7 +50,7 @@ function Research() {
         </div>
         <div className="p-4 bg-slate-900/50 border border-slate-800 rounded-lg flex flex-col items-center text-center">
           <ShieldAlert size={20} className="text-purple-400 mb-2" />
-          <p className="text-xs font-bold text-slate-200 uppercase tracking-tight">Cyber Security</p>
+          <p className="text-xs font-bold text-slate-200 uppercase tracking-tight">Cybersecurity</p>
         </div>
         <div className="p-4 bg-slate-900/50 border border-slate-800 rounded-lg flex flex-col items-center text-center">
           <Globe size={20} className="text-purple-400 mb-2" />
