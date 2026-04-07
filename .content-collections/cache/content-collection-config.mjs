@@ -11,6 +11,7 @@ var research = defineCollection({
     date: z.string(),
     venue: z.string().optional(),
     tags: z.array(z.string()),
+    externalUrl: z.string().optional(),
     authors: z.array(z.string()).optional(),
     arxiv: z.string().optional(),
     pdf: z.string().optional(),
