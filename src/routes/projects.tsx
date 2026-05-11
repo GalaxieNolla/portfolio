@@ -1,7 +1,17 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Card, CardContent } from '@/components/ui/card'
 import { Code2, Construction, GitBranch, Terminal, Github, ExternalLink } from 'lucide-react'
-import allProjects from '../../.content-collections/generated/allProjects.js'
+
+const allProjects = [
+  {
+    title: "Flow State",
+    description: "An Arcane-inspired productivity app that gamifies studying.",
+    tags: ["Productivity", "Gamification", "Pomodoro", "Focus", "Personal Project", "Python", "League of Legends"],
+    github: "https://github.com/GalaxieNolla/flow-state",
+    liveUrl: "https://youtu.be/JJk673GNfQ4",
+    content: "An Arcane-inspired productivity app that gamifies studying with a Pomodoro timer, task list, and real-time distraction monitoring with nudges to keep you in the flow state."
+  }
+]
 
 export const Route = createFileRoute('/projects')({
   component: Projects,
