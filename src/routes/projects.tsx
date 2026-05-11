@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Card, CardContent } from '@/components/ui/card'
 import { Code2, Construction, GitBranch, Terminal, Github, ExternalLink } from 'lucide-react'
-import { allProjects } from '../../.content-collections/generated/allProjects.js'
+import allProjects from '../../.content-collections/generated/allProjects.js'
 
 export const Route = createFileRoute('/projects')({
   component: Projects,
