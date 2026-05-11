@@ -49,11 +49,31 @@ function Projects() {
           </CardContent>
         </Card>
       ) : (
-        /* Project Cards */
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {allProjects.map((project) => (
             <Card key={project.title} className="bg-slate-900/60 border border-slate-800">
               <CardContent className="p-6">
+                {/* YouTube Thumbnail */}
+                {project.liveUrl && (
+                  <a 
+                    href={project.liveUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block mb-4 rounded-lg overflow-hidden group relative"
+                  >
+                    <img
+                      src={`https://img.youtube.com/vi/JJk673GNfQ4/maxresdefault.jpg`}
+                      alt={project.title}
+                      className="w-full object-cover group-hover:opacity-80 transition-opacity"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-black/60 rounded-full p-3 group-hover:bg-purple-600/80 transition-colors">
+                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                )}
                 <h2 className="text-xl font-bold text-white mb-2">{project.title}</h2>
                 <p className="text-slate-400 text-sm mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
