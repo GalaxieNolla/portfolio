@@ -70,4 +70,53 @@ function Research() {
           Google Scholar
         </a>
         <a 
-          href="https://www.
+          href="https://www.researchgate.net/profile/Alexia-Gallon"
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-4 py-2 bg-slate-900/50 border border-slate-800 rounded-lg text-slate-300 hover:text-white hover:border-purple-500/50 transition-all text-sm font-medium group"
+        >
+          <Search size={16} className="text-purple-400 group-hover:scale-110 transition-transform" />
+          ResearchGate
+        </a>
+      </div>
+
+      {/* Research Papers */}
+      <div className="space-y-6">
+        {papers.map((paper) => (
+          <Card key={paper.title} className="bg-slate-900/60 border border-slate-800">
+            <CardHeader>
+              <CardTitle className="text-white text-lg">{paper.title}</CardTitle>
+              {paper.authors && (
+                <p className="text-slate-400 text-sm">{paper.authors.join(', ')}</p>
+              )}
+            </CardHeader>
+            <CardContent>
+              <p className="text-slate-400 text-sm mb-4">{paper.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {paper.tags.map((tag) => (
+                  <Badge key={tag} variant="outline" className="text-purple-300 border-purple-800 text-xs">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+              <div className="flex gap-3">
+                {paper.arxiv && (
+                  <a href={paper.arxiv} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-sm text-slate-400 hover:text-white transition-colors">
+                    <FileText size={16} /> arXiv
+                  </a>
+                )}
+                {paper.externalUrl && (
+                  <a href={paper.externalUrl} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-sm text-slate-400 hover:text-purple-400 transition-colors">
+                    <ExternalLink size={16} /> View
+                  </a>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  )
+}
