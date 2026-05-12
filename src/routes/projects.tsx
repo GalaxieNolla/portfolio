@@ -20,7 +20,6 @@ export const Route = createFileRoute('/projects')({
 function Projects() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-16">
-      {/* Header */}
       <div className="mb-12">
         <div className="flex items-center gap-4 mb-4">
           <img src="/logo.png" alt="Logo" className="h-10 w-10 object-contain opacity-90" />
@@ -53,12 +52,7 @@ function Projects() {
             <Card key={project.title} className="bg-slate-900/60 border border-slate-800">
               <CardContent className="p-6">
                 {project.liveUrl && (
-                  
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block mb-4 rounded-lg overflow-hidden group relative"
-                  >
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="block mb-4 rounded-lg overflow-hidden group relative">
                     <img
                       src="https://img.youtube.com/vi/JJk673GNfQ4/maxresdefault.jpg"
                       alt={project.title}
