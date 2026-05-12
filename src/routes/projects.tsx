@@ -54,7 +54,7 @@ function Projects() {
                 {project.liveUrl && (
                   <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="block mb-4 rounded-lg overflow-hidden group relative">
                     <img
-                      src="https://img.youtube.com/vi/JJk673GNfQ4/maxresdefault.jpg"
+                      src="https://img.youtube.com/vi/JJk673GNfQ4/hqdefault.jpg"
                       alt={project.title}
                       className="w-full object-cover group-hover:opacity-80 transition-opacity"
                     />
