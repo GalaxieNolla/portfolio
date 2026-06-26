@@ -40,7 +40,7 @@ function Modeling() {
           </div>
 
           <div className="flex gap-6 mb-6">
-            
+            <a
               href="https://instagram.com/gallon_of_optimism"
               target="_blank"
               rel="noopener noreferrer"
