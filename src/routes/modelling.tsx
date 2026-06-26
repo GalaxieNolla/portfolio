@@ -90,6 +90,22 @@ function Modeling() {
           </div>
         ))}
       </div>
+      {/* Performance Video */}
+      <div className="mt-20">
+        <p className="text-purple-400 font-semibold text-sm uppercase tracking-[0.3em] mb-4">
+          On Screen
+        </p>
+        <h2 className="text-3xl font-bold text-white mb-8">Performance Reel</h2>
+        <div className="rounded-2xl overflow-hidden border border-white/5 aspect-video">
+          <iframe
+            src="https://www.youtube.com/embed/ZdJ3fKER3JY"
+            title="Performance Reel"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        </div>
+      </div>
     </div>
   )
 }
