@@ -26,11 +26,11 @@ function Modeling() {
           <p className="text-purple-400 font-semibold text-sm uppercase tracking-[0.3em] mb-4">
             Creative Portfolio
           </p>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Modeling & Performance</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Acting & Modeling</h1>
 
           <div className="space-y-4 text-slate-300 text-lg leading-relaxed mb-8">
             <p>
-              As an emerging actress with a foundation in stage theater and short film, I am expanding my creative reach into the{' '}
+              As an emerging actress with a foundation in stage theater and short film, I am expanding my creative reach into films and the{' '}
               <span className="text-white">commercial, editorial, and fashion landscape</span>. I view myself as a{' '}
               <span className="text-white font-medium">blank canvas</span>—an anchor that translates a vision into a visual narrative through movement, presence, and hues.
             </p>
