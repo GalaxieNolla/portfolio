@@ -48,19 +48,19 @@ const education = defineCollection({
   }),
 })
 
-const blog = defineCollection({
-  name: 'blog',
-  directory: 'content/blog',
-  include: '**/*.md',
-  schema: z.object({
-    title: z.string(),
-    date: z.string(),
-    summary: z.string(),
-    tags: z.array(z.string()),
-    author: z.string(),
-    content: z.string(),
-  }),
-})
+//const blog = defineCollection({
+  //name: 'blog',
+  //directory: 'content/blog',
+  //include: '**/*.md',
+  //schema: z.object({
+    //title: z.string(),
+    //date: z.string(),
+    //summary: z.string(),
+    //tags: z.array(z.string()),
+    //author: z.string(),
+    //content: z.string(),
+  //}),
+//})
 
 const projects = defineCollection({
   name: 'projects',
@@ -78,5 +78,5 @@ const projects = defineCollection({
 })
 
 export default defineConfig({
-  collections: [research, jobs, education, blog, projects],
+  collections: [research, jobs, education, projects],
 })
