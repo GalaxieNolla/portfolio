@@ -53,12 +53,6 @@ function Modeling() {
             >
               <Instagram size={18} /> @gallon_of_optimism
             </a>
-            <Link
-              to="/contact"
-              className="flex items-center gap-2 text-slate-400 hover:text-purple-400 transition-colors text-sm font-medium"
-            >
-              <Mail size={18} /> Booking Inquiries
-            </Link>
           </div>
 
           <Link
