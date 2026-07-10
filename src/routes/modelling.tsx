@@ -66,7 +66,7 @@ function Modeling() {
         {/* Right: Video */}
         <div className="rounded-2xl overflow-hidden border border-white/5 aspect-video">
           <iframe
-            src="https://www.youtube.com/embed/eVlaEaThBo8"
+            src="https://youtu.be/eVlaEaThBo8?si=9xkAEGWxo4eOmHxH"
             title="Demo Reel"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
